@@ -1,0 +1,228 @@
+{
+  "title": "诀别书",
+  "composer": "邓垚",
+  "sourcePublisher": "马克也有Club",
+  "sourceUrl": "https://www.bilibili.com/video/BV18t421W7ev/",
+  "createdDate": "2026-10-04",
+  "pages": [
+    {
+      "number": 1,
+      "firstMeasure": 1,
+      "lastMeasure": 28,
+      "image": "page-1.png"
+    },
+    {
+      "number": 2,
+      "firstMeasure": 29,
+      "lastMeasure": 56,
+      "image": "page-2.png"
+    },
+    {
+      "number": 3,
+      "firstMeasure": 57,
+      "lastMeasure": 84,
+      "image": "page-3.png"
+    },
+    {
+      "number": 4,
+      "firstMeasure": 85,
+      "lastMeasure": 109,
+      "image": "page-4.png"
+    }
+  ],
+  "systems": [
+    {
+      "system": 1,
+      "firstMeasure": 1,
+      "startSecond": 0,
+      "endSecond": 10,
+      "file": "row-01.png"
+    },
+    {
+      "system": 2,
+      "firstMeasure": 5,
+      "startSecond": 10,
+      "endSecond": 20,
+      "file": "row-02.png"
+    },
+    {
+      "system": 3,
+      "firstMeasure": 9,
+      "startSecond": 20,
+      "endSecond": 30,
+      "file": "row-03.png"
+    },
+    {
+      "system": 4,
+      "firstMeasure": 13,
+      "startSecond": 30,
+      "endSecond": 39,
+      "file": "row-04.png"
+    },
+    {
+      "system": 5,
+      "firstMeasure": 17,
+      "startSecond": 39,
+      "endSecond": 49,
+      "file": "row-05.png"
+    },
+    {
+      "system": 6,
+      "firstMeasure": 21,
+      "startSecond": 49,
+      "endSecond": 59,
+      "file": "row-06.png"
+    },
+    {
+      "system": 7,
+      "firstMeasure": 25,
+      "startSecond": 59,
+      "endSecond": 67,
+      "file": "row-07.png"
+    },
+    {
+      "system": 8,
+      "firstMeasure": 29,
+      "startSecond": 67,
+      "endSecond": 76,
+      "file": "row-08.png"
+    },
+    {
+      "system": 9,
+      "firstMeasure": 33,
+      "startSecond": 76,
+      "endSecond": 84,
+      "file": "row-09.png"
+    },
+    {
+      "system": 10,
+      "firstMeasure": 37,
+      "startSecond": 84,
+      "endSecond": 93,
+      "file": "row-10.png"
+    },
+    {
+      "system": 11,
+      "firstMeasure": 41,
+      "startSecond": 93,
+      "endSecond": 101,
+      "file": "row-11.png"
+    },
+    {
+      "system": 12,
+      "firstMeasure": 45,
+      "startSecond": 101,
+      "endSecond": 109,
+      "file": "row-12.png"
+    },
+    {
+      "system": 13,
+      "firstMeasure": 49,
+      "startSecond": 109,
+      "endSecond": 118,
+      "file": "row-13.png"
+    },
+    {
+      "system": 14,
+      "firstMeasure": 53,
+      "startSecond": 118,
+      "endSecond": 127,
+      "file": "row-14.png"
+    },
+    {
+      "system": 15,
+      "firstMeasure": 57,
+      "startSecond": 127,
+      "endSecond": 136,
+      "file": "row-15.png"
+    },
+    {
+      "system": 16,
+      "firstMeasure": 61,
+      "startSecond": 136,
+      "endSecond": 144,
+      "file": "row-16.png"
+    },
+    {
+      "system": 17,
+      "firstMeasure": 65,
+      "startSecond": 144,
+      "endSecond": 153,
+      "file": "row-17.png"
+    },
+    {
+      "system": 18,
+      "firstMeasure": 69,
+      "startSecond": 153,
+      "endSecond": 161,
+      "file": "row-18.png"
+    },
+    {
+      "system": 19,
+      "firstMeasure": 73,
+      "startSecond": 161,
+      "endSecond": 169,
+      "file": "row-19.png"
+    },
+    {
+      "system": 20,
+      "firstMeasure": 77,
+      "startSecond": 169,
+      "endSecond": 178,
+      "file": "row-20.png"
+    },
+    {
+      "system": 21,
+      "firstMeasure": 81,
+      "startSecond": 178,
+      "endSecond": 186,
+      "file": "row-21.png"
+    },
+    {
+      "system": 22,
+      "firstMeasure": 85,
+      "startSecond": 186,
+      "endSecond": 195,
+      "file": "row-22.png"
+    },
+    {
+      "system": 23,
+      "firstMeasure": 89,
+      "startSecond": 195,
+      "endSecond": 203,
+      "file": "row-23.png"
+    },
+    {
+      "system": 24,
+      "firstMeasure": 93,
+      "startSecond": 203,
+      "endSecond": 211,
+      "file": "row-24.png"
+    },
+    {
+      "system": 25,
+      "firstMeasure": 97,
+      "startSecond": 211,
+      "endSecond": 220,
+      "file": "row-25.png"
+    },
+    {
+      "system": 26,
+      "firstMeasure": 101,
+      "startSecond": 220,
+      "endSecond": 228,
+      "file": "row-26.png"
+    },
+    {
+      "system": 27,
+      "firstMeasure": 105,
+      "startSecond": 228,
+      "endSecond": 242,
+      "file": "row-27.png"
+    }
+  ],
+  "pdf": "juebieshu-saxophone-a4.pdf",
+  "paper": "A4",
+  "permissionBasis": "用户在当前会话确认已联系发布者并取得本次整理与发布授权。",
+  "qualityNote": "视频720P谱面整理，保留原记谱；第63小节速度标识原视频上沿裁切。"
+}

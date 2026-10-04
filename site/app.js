@@ -1,50 +1,61 @@
 "use strict";
-
-const sources = {
-  mark: {
-    title: "萨克斯独奏谱与伴奏",
-    owner: "马克也有Club",
-    summary: "原视频标题：【萨克斯谱】诀别书 邓垚 附伴奏。",
-    access: "查看原视频简介中的店铺与曲谱获取说明。",
-    url: "https://www.bilibili.com/video/BV18t421W7ev/",
-  },
-  "sweet-performance": {
-    title: "多乐器演奏与萨克斯谱",
-    owner: "泪樱甜心",
-    summary: "《诀别书》的多乐器接力演奏，发布标题注明萨克斯、单簧管等乐器曲谱及伴奏。",
-    access: "查看原视频和发布者主页，确认适用的萨克斯版本与获取方式。",
-    url: "https://www.bilibili.com/video/BV1Fk4y1f7Ny/",
-  },
-  "sweet-scores": {
-    title: "萨克斯与其他管弦乐版本",
-    owner: "甜心的音乐屋",
-    summary: "《诀别书》多乐器曲谱入口，发布标题包含萨克斯、长笛、单簧管及弦乐等版本。",
-    access: "原视频说明：各乐器乐谱与伴奏的获取或定制方式见发布者个人简介。",
-    url: "https://www.bilibili.com/video/BV1gi4y1s7q2/",
-  },
-};
-
-const dialog = document.getElementById("source-dialog");
-document.querySelectorAll("[data-detail]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const source = sources[button.dataset.detail];
-    if (!source) return;
-    if (typeof dialog.showModal !== "function") {
-      window.open(source.url, "_blank", "noopener,noreferrer");
-      return;
-    }
-    document.getElementById("dialog-title").textContent = source.title;
-    document.getElementById("dialog-summary").textContent = source.summary;
-    document.getElementById("dialog-owner").textContent = source.owner;
-    document.getElementById("dialog-access").textContent = source.access;
-    document.getElementById("dialog-link").href = source.url;
-    dialog.showModal();
-  });
+const ranges = [[1,28],[29,56],[57,84],[85,109]];
+const image = document.getElementById("score-image");
+const select = document.getElementById("page-select");
+const previous = document.getElementById("previous-page");
+const next = document.getElementById("next-page");
+const scroll = document.getElementById("score-scroll");
+const zoom = document.getElementById("zoom-score");
+const status = document.getElementById("viewer-status");
+const error = document.getElementById("load-error");
+const printButton = document.getElementById("print-score");
+let currentPage = 1;
+function showPage(number) {
+  currentPage = Math.max(1, Math.min(4, Number(number)));
+  const [first,last] = ranges[currentPage-1];
+  select.value = String(currentPage);
+  image.src = `./scores/juebieshu/page-${currentPage}.png`;
+  image.alt = `诀别书萨克斯曲谱，第${currentPage}页，第${first}至${last}小节`;
+  document.getElementById("measure-range").textContent = `第 ${first}–${last} 小节`;
+  status.textContent = `第${currentPage}页，第${first}至${last}小节`;
+  previous.disabled = currentPage === 1;
+  next.disabled = currentPage === 4;
+  scroll.scrollTop = 0;
+  scroll.scrollLeft = 0;
+  error.hidden = true;
+}
+select.disabled = false;
+next.disabled = false;
+zoom.disabled = false;
+printButton.disabled = false;
+select.addEventListener("change", () => showPage(select.value));
+previous.addEventListener("click", () => showPage(currentPage-1));
+next.addEventListener("click", () => showPage(currentPage+1));
+image.addEventListener("error", () => { error.hidden = false; });
+image.addEventListener("load", () => { error.hidden = true; });
+zoom.addEventListener("click", () => {
+  const expanded = scroll.classList.toggle("zoomed");
+  zoom.setAttribute("aria-pressed", String(expanded));
+  zoom.textContent = expanded ? "适合页面" : "放大阅读";
 });
-document.getElementById("close-dialog").addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", (event) => {
-  if (event.target !== dialog) return;
-  const bounds = dialog.getBoundingClientRect();
-  if (event.clientX < bounds.left || event.clientX > bounds.right ||
-      event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+document.addEventListener("keydown", (event) => {
+  if (["SELECT","INPUT","TEXTAREA","BUTTON"].includes(event.target.tagName) ||
+      event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+      scroll.classList.contains("zoomed")) return;
+  if (event.key === "ArrowLeft") { event.preventDefault(); showPage(currentPage-1); }
+  if (event.key === "ArrowRight") { event.preventDefault(); showPage(currentPage+1); }
+});
+printButton.addEventListener("click", async () => {
+  printButton.disabled = true;
+  printButton.textContent = "准备打印…";
+  try {
+    await Promise.all([...document.querySelectorAll(".print-pages img")].map(img => img.decode()));
+    window.print();
+  } catch {
+    error.hidden = false;
+    error.textContent = "打印谱页加载失败，请下载 A4 PDF 后打印。";
+  } finally {
+    printButton.disabled = false;
+    printButton.textContent = "打印全部 4 页";
+  }
 });
