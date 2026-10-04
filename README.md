@@ -2,7 +2,9 @@
 
 一个轻量、开源的萨克斯谱源书架，首个收录曲目是邓垚的《诀别书》。
 
-**网站：** https://zstar1003.github.io/SaxVoice/
+**网站：** https://xdxsb.top/SaxVoice/
+
+**GitHub Pages 入口：** https://zstar1003.github.io/SaxVoice/ （自动跳转至账号原有的自定义域名 `xdxsb.top`。）
 
 ## 内容与许可
 
