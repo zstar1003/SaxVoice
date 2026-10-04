@@ -1,49 +1,54 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171c19">
-  <meta name="description" content="《诀别书》降B高音萨克斯谱：3页A4矢量PDF，E小调记谱、实音D小调，支持阅读、下载和打印。">
-  <meta property="og:title" content="SaxVoice · 诀别书 A4萨克斯谱">
-  <meta property="og:description" content="降B高音萨克斯，3页A4矢量谱。在线阅读、下载和打印。">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://xdxsb.top/SaxVoice/">
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=bb-v2">
-  <title>SaxVoice · 诀别书 A4萨克斯曲谱</title>
+  <meta name="description" content="SaxVoice 萨克斯曲谱库。搜索曲目，切换降 B 高音、降 E 中音和降 B 次中音谱，在线阅读、下载 A4 PDF 和可编辑 MusicXML。">
+  <meta property="og:title" content="SaxVoice · 萨克斯曲谱库"><meta property="og:description" content="找到下一首想吹的旋律。三种萨克斯版本，A4 阅读、下载与打印。"><meta property="og:type" content="website">
+  <link rel="canonical" href="https://xdxsb.top/SaxVoice/"><link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=library-v3"><title>SaxVoice · 萨克斯曲谱库</title>
 </head>
 <body>
   <a class="skip-link" href="#score-viewer">跳至曲谱</a>
   <header class="site-header wrap">
     <a class="brand" href="./" aria-label="SaxVoice 首页"><span class="brand-mark" aria-hidden="true">sv</span><span>Sax<span class="gold">Voice</span><small>萨克斯曲谱书架</small></span></a>
-    <nav aria-label="主导航"><a href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf" target="_blank" rel="noopener">打开 PDF</a><a href="https://github.com/zstar1003/SaxVoice" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only">（新窗口）</span></a></nav>
+    <nav aria-label="主导航"><a href="#library">选一首曲子</a><a href="https://github.com/zstar1003/SaxVoice" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
   </header>
   <main class="wrap">
-    <section class="piece-heading" aria-labelledby="piece-title">
-      <div><p class="eyebrow">SHEET MUSIC / 001</p><h1 id="piece-title">诀别书<span class="gold">。</span></h1><p class="piece-subtitle">邓垚作曲 · 降 B 高音萨克斯 · 矢量重制版</p></div>
-      <div class="primary-actions"><a class="button button-gold" href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf" download="诀别书-降B高音萨克斯-A4.pdf">下载 A4 PDF <span aria-hidden="true">↓</span></a><button class="button button-outline" id="print-score" type="button" disabled>打印全部 3 页</button></div>
+    <section class="library-intro" aria-labelledby="library-title">
+      <div><p class="eyebrow">THE SAXOPHONE SHELF</p><h1 id="library-title">让旋律，<span>继续。</span></h1><p>一座可以慢慢填满的萨克斯曲谱书架。选曲、换乐器，开始下一次练习。</p></div>
+      <div class="library-count"><strong id="piece-count">08</strong><span>首曲目<br><b id="edition-count">24</b> 个乐器版本</span></div>
     </section>
-    <div class="reader-layout">
-      <section class="reader" id="score-viewer" aria-label="曲谱阅读器">
-        <div class="reader-toolbar"><div class="page-controls"><button class="icon-button" id="previous-page" type="button" disabled aria-label="上一页">‹</button><label for="page-select" class="sr-only">选择曲谱页码</label><select id="page-select" disabled><option value="1">第 1 页 / 共 3 页</option><option value="2">第 2 页 / 共 3 页</option><option value="3">第 3 页 / 共 3 页</option></select><button class="icon-button" id="next-page" type="button" disabled aria-label="下一页">›</button></div><button id="zoom-score" class="text-button" type="button" aria-pressed="false" disabled>放大阅读</button></div>
-        <p id="viewer-status" class="sr-only" role="status" aria-live="polite">第1页，第1至36小节</p>
-        <div class="score-scroll" id="score-scroll" tabindex="0" aria-label="曲谱页面，放大后可横向滚动"><img id="score-image" src="./scores/juebieshu/page-1.png?v=bb-v2" alt="诀别书萨克斯曲谱，第1页，第1至36小节" width="1273" height="1800" fetchpriority="high"></div>
-        <p id="load-error" class="load-error" role="alert" hidden>谱页加载失败。请重试，或使用上方的“打开 PDF”。</p>
-        <div class="reader-bottom"><span id="measure-range">第 1–36 小节</span><span>A4 · 黑白打印版</span></div>
-        <noscript><p class="noscript-note">当前显示第1页。请<a href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf">打开完整3页PDF</a>查看其余谱页。</p></noscript>
-      </section>
-      <aside class="score-info" aria-label="曲谱信息">
-        <div class="info-section"><p class="eyebrow">ABOUT THIS SCORE</p><h2>降 B 高音萨克斯，<br>三页完整旋律谱。</h2><dl><div><dt>页数</dt><dd>3 页 · 109 小节</dd></div><div><dt>谱面</dt><dd>矢量重绘五线谱</dd></div><div><dt>纸张</dt><dd>A4 · 210 × 297 mm</dd></div><div><dt>调号 / 拍号</dt><dd>1 个升号 / 4⁄4</dd></div><div><dt>记谱 / 实音</dt><dd>E 小调 / D 小调</dd></div></dl></div>
-        <div class="info-section"><h3>阅读与打印</h3><p>用页码切换曲谱，或点击“放大阅读”查看音符细节。电脑也可使用左右方向键翻页。</p><p>打印选择 A4 纵向、100% 或实际大小；关闭浏览器页眉页脚。下载 PDF 打印效果更稳定。</p></div>
-        <div class="info-section"><h3>这次调整了什么</h3><p>重新录入音符、节奏和延音线，移调为降 B 高音萨克斯记谱，去掉截图背景。完整109小节保留，重新排成3页。</p><p>C段（49–64小节）降低八度，属于演奏音区处理。对照版保留原谱音区，便于比较；两版的音级、节奏和小节顺序相同。</p><a class="source-link" href="./scores/juebieshu/juebieshu-soprano-bb-reference-a4.pdf" target="_blank" rel="noopener">下载原谱音区移调对照版 ↗</a><br><a class="source-link" href="./scores/juebieshu/juebieshu-soprano-bb.musicxml" download>下载可编辑 MusicXML ↓</a></div>
-        <div class="info-section"><h3>钢琴对照</h3><p>对照目标是邓垚《诀别书》原发行版（约4分7秒）。公开完整版录音中可找到第49–51小节的 F–A–A–G–C 音级，是曲中的过渡。</p><p>目前核对了开头、过渡段和主题回归的音级与结构；原发行母带与钢琴全曲的逐音一致性尚未全部核实。跟奏时以录音的自由速度为准。</p><a class="source-link" href="https://music.163.com/song?id=2038191895" target="_blank" rel="noopener noreferrer">打开邓垚原发行版 ↗</a></div>
-        <p class="permission-note">经授权整理发布。曲谱及音乐作品的权利归原权利人，网站代码的 MIT 许可不适用于曲谱。</p>
+    <div class="library-layout">
+      <aside class="library-sidebar" id="library" aria-label="曲目书架">
+        <details id="library-drawer" open>
+          <summary>曲目书架 <span id="result-count" aria-live="polite">8 首</span></summary>
+          <div class="library-tools"><label for="song-search">搜索曲目</label><div class="search-field"><span aria-hidden="true">⌕</span><input id="song-search" type="search" placeholder="曲名、作曲家、拼音…" autocomplete="off" disabled></div><label class="sr-only" for="genre-filter">曲目类型</label><select id="genre-filter" disabled><option value="">全部类型</option></select></div>
+          <div id="song-list" class="song-list" aria-label="曲目列表"><p class="list-loading">正在整理书架…</p></div>
+          <div id="empty-results" class="empty-results" hidden><p>没有找到这首曲子。</p><button id="clear-search" class="text-button" type="button">清除搜索与筛选</button></div>
+          <p class="shelf-note">每首均有高音、中音、次中音谱<br>A4 PDF · 可编辑 MusicXML</p>
+        </details>
       </aside>
+      <section class="score-area" aria-labelledby="piece-title">
+        <div class="piece-heading"><p class="eyebrow" id="piece-category">当代旋律 / 001</p><h2 id="piece-title">诀别书</h2><p id="piece-subtitle">邓垚 · 109 小节完整旋律</p></div>
+        <fieldset class="instrument-switch"><legend>选择你的萨克斯</legend><div class="instrument-options"><button type="button" data-instrument="soprano" aria-pressed="true" disabled>高音 <small>B♭ · Soprano</small></button><button type="button" data-instrument="alto" aria-pressed="false" disabled>中音 <small>E♭ · Alto</small></button><button type="button" data-instrument="tenor" aria-pressed="false" disabled>次中音 <small>B♭ · Tenor</small></button></div></fieldset>
+        <div class="score-actions"><div class="score-meta"><span id="written-key">记谱 E 小调</span><span id="score-summary">3 页 · 4/4</span></div><div class="primary-actions"><a class="button button-gold" id="download-pdf" href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf" download>下载 A4 PDF ↓</a><button class="button button-outline" id="print-score" type="button" disabled>打印 3 页</button></div></div>
+        <section class="reader" id="score-viewer" aria-label="曲谱阅读器">
+          <div class="reader-toolbar"><div class="page-controls"><button class="icon-button" id="previous-page" type="button" disabled aria-label="上一页">‹</button><label for="page-select" class="sr-only">选择曲谱页码</label><select id="page-select" disabled><option value="1">第 1 页 / 共 3 页</option></select><button class="icon-button" id="next-page" type="button" disabled aria-label="下一页">›</button></div><a id="open-pdf" href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf" target="_blank" rel="noopener">打开 PDF ↗</a><button id="zoom-score" class="text-button" type="button" aria-pressed="false" disabled>放大阅读</button></div>
+          <p id="viewer-status" class="sr-only" role="status" aria-live="polite">第 1 页，第 1 至 36 小节</p>
+          <div class="score-scroll" id="score-scroll" tabindex="0" aria-label="曲谱页面，放大后可横向滚动"><img id="score-image" src="./scores/juebieshu/page-1.png?v=library-v3" alt="诀别书降 B 高音萨克斯谱，第 1 页" width="1273" height="1800" fetchpriority="high"></div>
+          <p id="load-error" class="load-error" role="alert" hidden>谱页加载失败。请重试，或使用“打开 PDF”。</p>
+          <div class="reader-bottom"><span id="measure-range">第 1–36 小节</span><span>A4 · 210 × 297 mm</span></div>
+        </section>
+        <p id="catalog-error" class="load-error" role="alert" hidden>曲库暂时未能加载。<button type="button" onclick="location.reload()">重新加载</button>，或直接下载上方《诀别书》PDF。</p>
+        <noscript><p class="noscript-note">开启 JavaScript 即可搜索与切换曲目。也可直接<a href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf">下载《诀别书》完整 PDF</a>。</p></noscript>
+        <div class="score-notes"><div><h3>这份谱</h3><p id="arrangement-note">保留已确认的高音版，49–64 小节降低八度。</p><p id="instrument-note"></p><a id="download-xml" class="source-link" href="./scores/juebieshu/juebieshu-soprano-bb.musicxml" download>下载可编辑 MusicXML ↓</a></div><div><h3>阅读与打印</h3><p>用页码或左右方向键翻页。打印选择 A4 纵向、实际大小，关闭浏览器页眉页脚；下载 PDF 可获得矢量谱面。</p><button id="share-score" class="text-button" type="button" disabled>复制当前曲谱链接 ↗</button><p id="share-status" class="small-note" role="status" aria-live="polite"></p></div></div>
+        <details class="edition-details"><summary>版本与曲目说明</summary><p id="rights-note"></p><p id="verification-note"></p><a id="source-link" class="source-link" target="_blank" rel="noopener noreferrer" hidden></a><a id="reference-pdf" class="source-link" target="_blank" rel="noopener" hidden>原谱音区移调对照版 ↗</a></details>
+      </section>
     </div>
   </main>
-  <footer class="site-footer wrap"><span>SaxVoice<span class="gold">.</span></span><p>降 B 高音萨克斯 · 矢量重制 · 2026.10.05</p><a href="https://github.com/zstar1003/SaxVoice" target="_blank" rel="noopener noreferrer">开源代码 · GitHub Pages</a></footer>
-  <section class="print-pages" aria-label="全部打印谱页"><img src="./scores/juebieshu/page-1.png?v=bb-v2" alt="打印第1页" loading="eager"><img src="./scores/juebieshu/page-2.png?v=bb-v2" alt="打印第2页" loading="eager"><img src="./scores/juebieshu/page-3.png?v=bb-v2" alt="打印第3页" loading="eager"></section>
-  <script src="./app.js?v=bb-v2" defer></script>
+  <footer class="site-footer wrap"><span>SaxVoice<span class="gold">.</span></span><p>为每一次练习，多留一首旋律。</p><a href="https://github.com/zstar1003/SaxVoice" target="_blank" rel="noopener noreferrer">开源代码 · GitHub Pages</a></footer>
+  <section class="print-pages" id="print-pages" aria-label="当前曲谱的全部打印谱页"></section>
+  <script src="./app.js?v=library-v3" defer></script>
 </body>
 </html>

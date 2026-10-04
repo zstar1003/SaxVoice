@@ -1,0 +1,718 @@
+{
+  "version": "library-v3",
+  "updatedDate": "2026-10-05",
+  "instruments": {
+    "soprano": {
+      "label": "高音",
+      "name": "降 B 高音萨克斯",
+      "english": "Soprano Saxophone in B-flat",
+      "program": 65,
+      "diatonic": -1,
+      "chromatic": -2,
+      "octave": 0
+    },
+    "alto": {
+      "label": "中音",
+      "name": "降 E 中音萨克斯",
+      "english": "Alto Saxophone in E-flat",
+      "program": 66,
+      "diatonic": -5,
+      "chromatic": -9,
+      "octave": 0
+    },
+    "tenor": {
+      "label": "次中音",
+      "name": "降 B 次中音萨克斯",
+      "english": "Tenor Saxophone in B-flat",
+      "program": 67,
+      "diatonic": -1,
+      "chromatic": -2,
+      "octave": -1
+    }
+  },
+  "pieces": [
+    {
+      "id": "juebieshu",
+      "title": "诀别书",
+      "english": "Jue Bie Shu",
+      "aliases": "juebieshu juebie 诀别",
+      "composer": "邓垚",
+      "genre": "当代旋律",
+      "difficulty": "进阶",
+      "mode": "minor",
+      "concertKey": "D 小调",
+      "meterText": "4/4",
+      "measureCount": 109,
+      "description": "109 小节完整旋律，保留已确认的高音版；49–64 小节降低八度。",
+      "rights": "经授权整理发布；音乐作品及原曲谱权利归原权利人。",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 小调",
+          "writtenMidiRange": [
+            64,
+            90
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/juebieshu/juebieshu-soprano-bb-a4.pdf",
+          "musicxml": "scores/juebieshu/juebieshu-soprano-bb.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 36,
+              "image": "scores/juebieshu/page-1.png"
+            },
+            {
+              "number": 2,
+              "firstMeasure": 37,
+              "lastMeasure": 72,
+              "image": "scores/juebieshu/page-2.png"
+            },
+            {
+              "number": 3,
+              "firstMeasure": 73,
+              "lastMeasure": 109,
+              "image": "scores/juebieshu/page-3.png"
+            }
+          ],
+          "referencePdf": "scores/juebieshu/juebieshu-soprano-bb-reference-a4.pdf"
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 小调",
+          "writtenMidiRange": [
+            59,
+            85
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/juebieshu/alto/score.pdf",
+          "musicxml": "scores/juebieshu/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 36,
+              "image": "scores/juebieshu/alto/page-1.png"
+            },
+            {
+              "number": 2,
+              "firstMeasure": 37,
+              "lastMeasure": 72,
+              "image": "scores/juebieshu/alto/page-2.png"
+            },
+            {
+              "number": 3,
+              "firstMeasure": 73,
+              "lastMeasure": 109,
+              "image": "scores/juebieshu/alto/page-3.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "E 小调",
+          "writtenMidiRange": [
+            64,
+            90
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/juebieshu/tenor/score.pdf",
+          "musicxml": "scores/juebieshu/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 36,
+              "image": "scores/juebieshu/tenor/page-1.png"
+            },
+            {
+              "number": 2,
+              "firstMeasure": 37,
+              "lastMeasure": 72,
+              "image": "scores/juebieshu/tenor/page-2.png"
+            },
+            {
+              "number": 3,
+              "firstMeasure": 73,
+              "lastMeasure": 109,
+              "image": "scores/juebieshu/tenor/page-3.png"
+            }
+          ]
+        }
+      },
+      "comparisonRecording": "https://music.163.com/song?id=2038191895",
+      "verificationNote": "核对开头、49-64小节与段落回归；与原录音同调。单声部编配含八度选择，非钢琴双手逐音转录。"
+    },
+    {
+      "id": "amazing-grace",
+      "title": "奇异恩典",
+      "english": "Amazing Grace",
+      "composer": "传统旋律 NEW BRITAIN",
+      "genre": "传统旋律",
+      "difficulty": "入门",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 15 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+      },
+      "description": "完整传统旋律，含弱起与跨小节延音线；练习连贯气息。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "concertKey": "G 大调",
+      "meterText": "3/4",
+      "measureCount": 17,
+      "aliases": "qiyien dian qiyiendian 恩典",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/amazing-grace/soprano/score.pdf",
+          "musicxml": "scores/amazing-grace/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/amazing-grace/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            59,
+            71
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/amazing-grace/alto/score.pdf",
+          "musicxml": "scores/amazing-grace/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/amazing-grace/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/amazing-grace/tenor/score.pdf",
+          "musicxml": "scores/amazing-grace/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/amazing-grace/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "greensleeves",
+      "title": "绿袖子",
+      "english": "Greensleeves",
+      "composer": "英国传统民歌",
+      "genre": "传统旋律",
+      "difficulty": "进阶",
+      "mode": "minor",
+      "source": {
+        "label": "Mutopia · 公共领域版 No.1247",
+        "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1247"
+      },
+      "description": "完整传统旋律，6/8 拍；保留附点和临时升号。速度按四分音符标示。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "concertKey": "E 小调",
+      "meterText": "6/8",
+      "measureCount": 17,
+      "aliases": "lvxiuzi 绿袖",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "F♯ 小调",
+          "writtenMidiRange": [
+            61,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/greensleeves/soprano/score.pdf",
+          "musicxml": "scores/greensleeves/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/greensleeves/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "C♯ 小调",
+          "writtenMidiRange": [
+            68,
+            83
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/greensleeves/alto/score.pdf",
+          "musicxml": "scores/greensleeves/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/greensleeves/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "F♯ 小调",
+          "writtenMidiRange": [
+            61,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/greensleeves/tenor/score.pdf",
+          "musicxml": "scores/greensleeves/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/greensleeves/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "auld-lang-syne",
+      "title": "友谊地久天长",
+      "english": "Auld Lang Syne",
+      "composer": "苏格兰传统民歌",
+      "genre": "传统旋律",
+      "difficulty": "入门",
+      "mode": "major",
+      "source": {
+        "label": "传统旋律对照 · John Chambers ABC",
+        "url": "https://abcnotation.com/tunePage?a=trillian.mit.edu%2F~jc%2Fmusic%2Fabc%2Fsong%2FAuld_Lang_Syne-F-16-2%2F0000"
+      },
+      "description": "完整传统主歌与副歌；弱起接入，适合练习附点节奏。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "concertKey": "F 大调",
+      "meterText": "4/4",
+      "measureCount": 17,
+      "aliases": "youyidijiutianchang 友谊",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/auld-lang-syne/soprano/score.pdf",
+          "musicxml": "scores/auld-lang-syne/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/auld-lang-syne/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            69,
+            83
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/auld-lang-syne/alto/score.pdf",
+          "musicxml": "scores/auld-lang-syne/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/auld-lang-syne/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/auld-lang-syne/tenor/score.pdf",
+          "musicxml": "scores/auld-lang-syne/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/auld-lang-syne/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "twinkle",
+      "title": "小星星",
+      "english": "Twinkle, Twinkle, Little Star",
+      "composer": "法国传统旋律",
+      "genre": "练习小曲",
+      "difficulty": "入门",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 336 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+      },
+      "description": "完整 24 小节旋律；适合长音、吐音与基本指法练习。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "concertKey": "C 大调",
+      "meterText": "2/4",
+      "measureCount": 24,
+      "aliases": "xiaoxingxing 星星",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            71
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/twinkle/soprano/score.pdf",
+          "musicxml": "scores/twinkle/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/twinkle/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            69,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/twinkle/alto/score.pdf",
+          "musicxml": "scores/twinkle/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/twinkle/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            71
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/twinkle/tenor/score.pdf",
+          "musicxml": "scores/twinkle/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/twinkle/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "frere-jacques",
+      "title": "两只老虎",
+      "english": "Frère Jacques",
+      "composer": "法国传统轮唱曲",
+      "genre": "练习小曲",
+      "difficulty": "入门",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 94 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+      },
+      "description": "完整法国轮唱旋律，可独奏或分组错开两小节进入。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "concertKey": "F 大调",
+      "meterText": "4/4",
+      "measureCount": 8,
+      "aliases": "liangzhilaohu 两只 老虎",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/frere-jacques/soprano/score.pdf",
+          "musicxml": "scores/frere-jacques/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 8,
+              "image": "scores/frere-jacques/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            69,
+            83
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/frere-jacques/alto/score.pdf",
+          "musicxml": "scores/frere-jacques/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 8,
+              "image": "scores/frere-jacques/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/frere-jacques/tenor/score.pdf",
+          "musicxml": "scores/frere-jacques/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 8,
+              "image": "scores/frere-jacques/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ode-to-joy",
+      "title": "欢乐颂",
+      "english": "Ode to Joy",
+      "composer": "路德维希·范·贝多芬",
+      "genre": "古典主题",
+      "difficulty": "入门",
+      "mode": "major",
+      "source": {
+        "label": "Mutopia · 公共领域版 No.528",
+        "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528"
+      },
+      "description": "16 小节主题旋律版，含中段与主题回归；取自公共领域四声部版本的主旋律。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "concertKey": "G 大调",
+      "meterText": "4/4",
+      "measureCount": 16,
+      "aliases": "huanlesong 贝多芬 Beethoven",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/ode-to-joy/soprano/score.pdf",
+          "musicxml": "scores/ode-to-joy/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/ode-to-joy/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            59,
+            71
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/ode-to-joy/alto/score.pdf",
+          "musicxml": "scores/ode-to-joy/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/ode-to-joy/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/ode-to-joy/tenor/score.pdf",
+          "musicxml": "scores/ode-to-joy/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/ode-to-joy/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "brahms-lullaby",
+      "title": "摇篮曲",
+      "english": "Wiegenlied · Brahms’s Lullaby",
+      "composer": "约翰内斯·勃拉姆斯",
+      "genre": "古典主题",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 67 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+      },
+      "description": "Op.49 No.4 完整主题旋律；保留弱起、附点与末句装饰节奏。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "concertKey": "F 大调",
+      "meterText": "3/4",
+      "measureCount": 17,
+      "aliases": "yaolanqu 勃拉姆斯 Brahms",
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            67,
+            81
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/brahms-lullaby/soprano/score.pdf",
+          "musicxml": "scores/brahms-lullaby/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/brahms-lullaby/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/brahms-lullaby/alto/score.pdf",
+          "musicxml": "scores/brahms-lullaby/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/brahms-lullaby/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            67,
+            81
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/brahms-lullaby/tenor/score.pdf",
+          "musicxml": "scores/brahms-lullaby/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/brahms-lullaby/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

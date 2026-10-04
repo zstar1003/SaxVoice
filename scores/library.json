@@ -1,0 +1,293 @@
+[
+  {
+    "id": "amazing-grace",
+    "title": "奇异恩典",
+    "english": "Amazing Grace",
+    "composer": "传统旋律 NEW BRITAIN",
+    "genre": "传统旋律",
+    "difficulty": "入门",
+    "concertKeyFifths": 1,
+    "mode": "major",
+    "meter": [
+      3,
+      4
+    ],
+    "tempo": 76,
+    "bars": [
+      "D4:q",
+      "G4:h B4:e G4:e",
+      "B4:h A4:q",
+      "G4:h E4:q",
+      "D4:h D4:q",
+      "G4:h B4:e G4:e",
+      "B4:h A4:q",
+      "D5:h.~",
+      "D5:h_ B4:q",
+      "B4:h A4:q",
+      "G4:h E4:q",
+      "G4:h B4:e G4:e",
+      "A4:h A4:q",
+      "G4:h B4:e G4:e",
+      "B4:h A4:q",
+      "G4:h.~",
+      "G4:h_"
+    ],
+    "source": {
+      "label": "历史旋律对照 · 曲集第 15 页",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+    },
+    "description": "完整传统旋律，含弱起与跨小节延音线；练习连贯气息。",
+    "pickupTicks": 4,
+    "endingTicks": 8,
+    "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。"
+  },
+  {
+    "id": "greensleeves",
+    "title": "绿袖子",
+    "english": "Greensleeves",
+    "composer": "英国传统民歌",
+    "genre": "传统旋律",
+    "difficulty": "进阶",
+    "concertKeyFifths": 1,
+    "mode": "minor",
+    "meter": [
+      6,
+      8
+    ],
+    "tempo": 72,
+    "bars": [
+      "E4:e",
+      "G4:q A4:e B4:e. C5:s B4:e",
+      "A4:q F#4:e D4:e. E4:s F#4:e",
+      "G4:q E4:e E4:e. D#4:s E4:e",
+      "F#4:q. B3:q E4:e",
+      "G4:q A4:e B4:e. C5:s B4:e",
+      "A4:q F#4:e D4:e. E4:s F#4:e",
+      "G4:e. F#4:s E4:e D#4:e. C#4:s D#4:e",
+      "E4:q. E4:q R:e",
+      "D5:q. D5:e. C#5:s B4:e",
+      "A4:q F#4:e D4:e. E4:s F#4:e",
+      "G4:q E4:e E4:e. D#4:s E4:e",
+      "F#4:q D#4:e B3:q R:e",
+      "D5:q. D5:e. C5:s B4:e",
+      "A4:q F#4:e D4:e. E4:s F#4:e",
+      "G4:e. F#4:s E4:e D#4:e. C#4:s D#4:e",
+      "E4:q. E4:q"
+    ],
+    "source": {
+      "label": "Mutopia · 公共领域版 No.1247",
+      "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1247"
+    },
+    "description": "完整传统旋律，6/8 拍；保留附点和临时升号。速度按四分音符标示。",
+    "pickupTicks": 2,
+    "endingTicks": 10,
+    "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。"
+  },
+  {
+    "id": "auld-lang-syne",
+    "title": "友谊地久天长",
+    "english": "Auld Lang Syne",
+    "composer": "苏格兰传统民歌",
+    "genre": "传统旋律",
+    "difficulty": "入门",
+    "concertKeyFifths": -1,
+    "mode": "major",
+    "meter": [
+      4,
+      4
+    ],
+    "tempo": 88,
+    "bars": [
+      "C4:q",
+      "F4:q. F4:e F4:q A4:q",
+      "G4:q. F4:e G4:q A4:e G4:e",
+      "F4:q. F4:e A4:q C5:q",
+      "D5:h. D5:q",
+      "C5:q. A4:e A4:q F4:q",
+      "G4:q. F4:e G4:q A4:e G4:e",
+      "F4:q. D4:e D4:q C4:q",
+      "F4:h. D5:q",
+      "C5:q. A4:e A4:q F4:q",
+      "G4:q. F4:e G4:q D5:q",
+      "C5:q. A4:e A4:q C5:q",
+      "D5:h. D5:q",
+      "C5:q. A4:e A4:q F4:q",
+      "G4:q. F4:e G4:q A4:e G4:e",
+      "F4:q. D4:e D4:q C4:q",
+      "F4:h."
+    ],
+    "source": {
+      "label": "传统旋律对照 · John Chambers ABC",
+      "url": "https://abcnotation.com/tunePage?a=trillian.mit.edu%2F~jc%2Fmusic%2Fabc%2Fsong%2FAuld_Lang_Syne-F-16-2%2F0000"
+    },
+    "description": "完整传统主歌与副歌；弱起接入，适合练习附点节奏。",
+    "pickupTicks": 4,
+    "endingTicks": 12,
+    "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。"
+  },
+  {
+    "id": "twinkle",
+    "title": "小星星",
+    "english": "Twinkle, Twinkle, Little Star",
+    "composer": "法国传统旋律",
+    "genre": "练习小曲",
+    "difficulty": "入门",
+    "concertKeyFifths": 0,
+    "mode": "major",
+    "meter": [
+      2,
+      4
+    ],
+    "tempo": 96,
+    "bars": [
+      "C4:q C4:q",
+      "G4:q G4:q",
+      "A4:q A4:q",
+      "G4:h",
+      "F4:q F4:q",
+      "E4:q E4:q",
+      "D4:q D4:q",
+      "C4:h",
+      "G4:q G4:q",
+      "F4:q F4:q",
+      "E4:q E4:q",
+      "D4:h",
+      "G4:q G4:q",
+      "F4:q F4:q",
+      "E4:q E4:q",
+      "D4:h",
+      "C4:q C4:q",
+      "G4:q G4:q",
+      "A4:q A4:q",
+      "G4:h",
+      "F4:q F4:q",
+      "E4:q E4:q",
+      "D4:q D4:q",
+      "C4:h"
+    ],
+    "source": {
+      "label": "历史旋律对照 · 曲集第 336 页",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+    },
+    "description": "完整 24 小节旋律；适合长音、吐音与基本指法练习。",
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。"
+  },
+  {
+    "id": "frere-jacques",
+    "title": "两只老虎",
+    "english": "Frère Jacques",
+    "composer": "法国传统轮唱曲",
+    "genre": "练习小曲",
+    "difficulty": "入门",
+    "concertKeyFifths": -1,
+    "mode": "major",
+    "meter": [
+      4,
+      4
+    ],
+    "tempo": 100,
+    "bars": [
+      "F4:q G4:q A4:q F4:q",
+      "F4:q G4:q A4:q F4:q",
+      "A4:q Bb4:q C5:h",
+      "A4:q Bb4:q C5:h",
+      "C5:e D5:e C5:e Bb4:e A4:q F4:q",
+      "C5:e D5:e C5:e Bb4:e A4:q F4:q",
+      "F4:q C4:q F4:h",
+      "F4:q C4:q F4:h"
+    ],
+    "source": {
+      "label": "历史旋律对照 · 曲集第 94 页",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+    },
+    "description": "完整法国轮唱旋律，可独奏或分组错开两小节进入。",
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。"
+  },
+  {
+    "id": "ode-to-joy",
+    "title": "欢乐颂",
+    "english": "Ode to Joy",
+    "composer": "路德维希·范·贝多芬",
+    "genre": "古典主题",
+    "difficulty": "入门",
+    "concertKeyFifths": 1,
+    "mode": "major",
+    "meter": [
+      4,
+      4
+    ],
+    "tempo": 100,
+    "bars": [
+      "B4:q B4:q C5:q D5:q",
+      "D5:q C5:q B4:q A4:q",
+      "G4:q G4:q A4:q B4:q",
+      "B4:q. A4:e A4:h",
+      "B4:q B4:q C5:q D5:q",
+      "D5:q C5:q B4:q A4:q",
+      "G4:q G4:q A4:q B4:q",
+      "A4:q. G4:e G4:h",
+      "A4:q A4:q B4:q G4:q",
+      "A4:q B4:e C5:e B4:q G4:q",
+      "A4:q B4:e C5:e B4:q A4:q",
+      "G4:q A4:q D4:h",
+      "B4:q B4:q C5:q D5:q",
+      "D5:q C5:q B4:q A4:q",
+      "G4:q G4:q A4:q B4:q",
+      "A4:q. G4:e G4:h"
+    ],
+    "source": {
+      "label": "Mutopia · 公共领域版 No.528",
+      "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528"
+    },
+    "description": "16 小节主题旋律版，含中段与主题回归；取自公共领域四声部版本的主旋律。",
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。"
+  },
+  {
+    "id": "brahms-lullaby",
+    "title": "摇篮曲",
+    "english": "Wiegenlied · Brahms’s Lullaby",
+    "composer": "约翰内斯·勃拉姆斯",
+    "genre": "古典主题",
+    "difficulty": "基础",
+    "concertKeyFifths": -1,
+    "mode": "major",
+    "meter": [
+      3,
+      4
+    ],
+    "tempo": 76,
+    "bars": [
+      "A4:e A4:e",
+      "C5:h A4:e A4:e",
+      "C5:h A4:e C5:e",
+      "F5:q E5:q. D5:e",
+      "D5:q C5:q G4:e A4:e",
+      "Bb4:q G4:q G4:e Bb4:e",
+      "D5:h G4:e Bb4:e",
+      "E5:e D5:e C5:q E5:q",
+      "F5:h F4:e F4:e",
+      "G5:h E5:e C5:e",
+      "D5:h Bb4:e G4:e",
+      "C5:q D5:q E5:q",
+      "D5:h F4:e F4:e",
+      "G5:h E5:e C5:e",
+      "D5:h Bb4:e G4:e",
+      "C5:e D5:s C5:s Bb4:q G4:q",
+      "F4:h"
+    ],
+    "source": {
+      "label": "历史旋律对照 · 曲集第 67 页",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf"
+    },
+    "description": "Op.49 No.4 完整主题旋律；保留弱起、附点与末句装饰节奏。",
+    "pickupTicks": 4,
+    "endingTicks": 8,
+    "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。"
+  }
+]
