@@ -1,6 +1,6 @@
 """Build the authorized video score as four A4 pages.
 
-Usage: bundled-python scripts/build_score.py path/to/source.mp4
+Usage: python scripts/build_score.py path/to/source.mp4
 Requires ffmpeg, numpy, opencv-python, reportlab and pdftoppm.
 The video remains local; only the extracted score and PDF are published.
 """
