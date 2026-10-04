@@ -1,5 +1,5 @@
 "use strict";
-const ranges = [[1,28],[29,56],[57,84],[85,109]];
+const ranges = [[1,36],[37,72],[73,109]];
 const image = document.getElementById("score-image");
 const select = document.getElementById("page-select");
 const previous = document.getElementById("previous-page");
@@ -11,15 +11,15 @@ const error = document.getElementById("load-error");
 const printButton = document.getElementById("print-score");
 let currentPage = 1;
 function showPage(number) {
-  currentPage = Math.max(1, Math.min(4, Number(number)));
+  currentPage = Math.max(1, Math.min(ranges.length, Number(number)));
   const [first,last] = ranges[currentPage-1];
   select.value = String(currentPage);
-  image.src = `./scores/juebieshu/page-${currentPage}.png`;
+  image.src = `./scores/juebieshu/page-${currentPage}.png?v=bb-v2`;
   image.alt = `诀别书萨克斯曲谱，第${currentPage}页，第${first}至${last}小节`;
   document.getElementById("measure-range").textContent = `第 ${first}–${last} 小节`;
   status.textContent = `第${currentPage}页，第${first}至${last}小节`;
   previous.disabled = currentPage === 1;
-  next.disabled = currentPage === 4;
+  next.disabled = currentPage === ranges.length;
   scroll.scrollTop = 0;
   scroll.scrollLeft = 0;
   error.hidden = true;
@@ -56,6 +56,6 @@ printButton.addEventListener("click", async () => {
     error.textContent = "打印谱页加载失败，请下载 A4 PDF 后打印。";
   } finally {
     printButton.disabled = false;
-    printButton.textContent = "打印全部 4 页";
+    printButton.textContent = "打印全部 3 页";
   }
 });
