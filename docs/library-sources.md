@@ -78,3 +78,17 @@
 | 无心快语 / Careless Whisper | [Sax School，中音谱，Nigel McGill 记谱](https://saxschoolonline.com/wp-content/uploads/2015/06/Careless-Whisper-Alto-Saxophone.pdf) | 原谱 2–18 小节的萨克斯开场独奏，共 17 小节；省略第 1 小节半音上行装饰及倚音，保留两遍主题和连接句。中音记谱 B 小调，高音记谱 E 小调，实音 D 小调。四分音符 150，按参考谱的速度标示。 |
 
 这三首为编选主题/独奏段，不是全曲伴奏跟奏版；不含歌词、原录音或伴奏。目录新增“流行与当代 › 萨克斯名曲”，电影主题归入轻音乐。当前曲库 49 首、98 版、102 页。
+
+
+## 国乐与动漫主题（repertoire-v8）
+
+新增四首的单声部萨克斯编选版，每首均有降 B 高音和降 E 中音的站内 A4 矢量 PDF、MusicXML 与谱页预览。授权记录沿用用户已确认协商完成的发布授权；不将作品标为 MIT 或公共领域。
+
+| 曲目 | 参考谱 | 编选范围与处理 |
+| --- | --- | --- |
+| 赛马 | [Everyone Piano，No.7689](https://www.everyonepiano.cn/Music-7689.html)，公开五线谱第 1–2 页 | 黄海怀作品；原谱 1–42 小节开篇主题，2/4，四分音符 160。提取最高旋律，省略伴奏与后续二胡炫技段。按 D 小调记谱，所选段未使用降 B 音。 |
+| 名侦探柯南 | [PangfunJ 钢琴编配](https://pangfunjstudio.com/wp-content/uploads/2020/07/case-closed-Detective-Conan.pdf) | 大野克夫经典主主题，实音 F 小调；原谱 9–22 小节提取旋律，省略倚音，最后另加 C 全音符收束，共 15 小节。原谱未标速度，四分音符 120 为练习参考。 |
+| 天空之城 | [Gavin Libotte 吉他编配](https://static1.squarespace.com/static/560104c1e4b0ead07ebb779f/t/60f0f5147c30ad68c63c7e79/1626404119770/laputa%2Bcastle%2Bin%2Bthe%2Bsky%2B.pdf) | 久石让《Carrying You》；按吉他实音录入（谱面低八度），弱起及 1–32 小节，共 33 个记谱小节。提取旋律，第 28 小节 B 长音替代伴奏分解和弦，第 32 小节末弱起改为四分休止以结束；省略 D.C. 和尾声反复。中音版整体升八度，以免 B3 实音移调后超出常规音域；实际与高音版同一八度。四分音符 88 为练习参考。 |
+| 永远同在 | [Lou Xiao Ping 长笛二重奏编配](https://cgflute.com/wp-content/uploads/2017/10/always_with_me_spirited_away.pdf) | 木村弓《Always With Me》，《千与千寻》主题；上声部降低八度，实音 G 大调，3/4。弱起及 1–31 小节，采用第二房 G 结尾并缩为两拍，合计 33 个记谱小节；省略反复。四分音符 96 为练习参考。 |
+
+分类新增“器乐与古典 › 国乐改编”和“流行与当代 › 动漫与影视”；《圣诞快乐，劳伦斯先生》移入后者。当前曲库 **53 首、106 版、112 页 A4**，5 个一级分类、13 个二级分组。主题练习谱的编选范围也在网页信息和 PDF 页脚列明。

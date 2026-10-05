@@ -1,11 +1,13 @@
 [
   {"id":"popular","label":"流行与当代","groups":[
     {"id":"sax-classics","label":"萨克斯名曲","pieces":["going-home","careless-whisper"]},
-    {"id":"contemporary","label":"轻音乐","pieces":["merry-christmas-mr-lawrence","juebieshu","long-road-ahead","brittle-rille","danse-morialta"]},
-    {"id":"popular-bgm","label":"热门 BGM","pieces":["monkeys-spinning-monkeys","fluffing-a-duck","sneaky-snitch"]}
+    {"id":"contemporary","label":"轻音乐","pieces":["juebieshu","long-road-ahead","brittle-rille","danse-morialta"]},
+    {"id":"popular-bgm","label":"热门 BGM","pieces":["monkeys-spinning-monkeys","fluffing-a-duck","sneaky-snitch"]},
+    {"id":"anime-film","label":"动漫与影视","pieces":["detective-conan","carrying-you","always-with-me","merry-christmas-mr-lawrence"]}
   ]},
   {"id":"instrumental","label":"器乐与古典","groups":[
-    {"id":"classical","label":"古典主题","pieces":["ode-to-joy","brahms-lullaby"]}
+    {"id":"classical","label":"古典主题","pieces":["ode-to-joy","brahms-lullaby"]},
+    {"id":"chinese-instrumental","label":"国乐改编","pieces":["saima"]}
   ]},
   {"id":"folk","label":"民谣与传统","groups":[
     {"id":"british-folk","label":"英伦民谣","pieces":["greensleeves","auld-lang-syne","annie-laurie","loch-lomond","my-bonnie","scarborough-fair"]},

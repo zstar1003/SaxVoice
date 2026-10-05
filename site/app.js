@@ -295,7 +295,7 @@
     if (event.key === 'Escape' && document.body.classList.contains('focus-mode')) $('focus-reader').click();
   });
   window.addEventListener('popstate', () => { if (state.catalog) readURL(); });
-  fetch('./catalog.json?v=fullscreen-v7').then(response => {
+  fetch('./catalog.json?v=repertoire-v8').then(response => {
     if (!response.ok) throw new Error('Catalog unavailable');
     return response.json();
   }).then(catalog => {

@@ -15,10 +15,14 @@
 
 ## 曲库
 
-当前 **49 首曲目、98 个乐器版本、102 页 A4 曲谱**。包括流行与当代、器乐与古典、民谣与传统、节庆与颂歌、入门练习，共 5 个一级分类、11 个二级分组。
+当前 **53 首曲目、106 个乐器版本、112 页 A4 曲谱**。包括流行与当代、器乐与古典、民谣与传统、节庆与颂歌、入门练习，共 5 个一级分类、13 个二级分组。
 
 | 精选曲目 | 本站版本 |
 | --- | --- |
+| [赛马](https://xdxsb.top/SaxVoice/?song=saima) | 开篇主题，42 小节 |
+| [名侦探柯南](https://xdxsb.top/SaxVoice/?song=detective-conan) | 经典主主题段及收束，15 小节 |
+| [天空之城](https://xdxsb.top/SaxVoice/?song=carrying-you) | 主题两段，含弱起共 33 小节 |
+| [永远同在](https://xdxsb.top/SaxVoice/?song=always-with-me) | 《千与千寻》主旋律一遍，含弱起共 33 小节 |
 | [圣诞快乐，劳伦斯先生](https://xdxsb.top/SaxVoice/?song=merry-christmas-mr-lawrence) | 三连音前奏与首段主题，32 小节 |
 | [回家 / Going Home](https://xdxsb.top/SaxVoice/?song=going-home) | 开篇萨克斯主题，21 小节 |
 | [无心快语 / Careless Whisper](https://xdxsb.top/SaxVoice/?song=careless-whisper) | 萨克斯开场独奏，17 小节 |

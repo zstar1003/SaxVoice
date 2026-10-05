@@ -1,5 +1,5 @@
 {
-  "version": "fullscreen-v7",
+  "version": "repertoire-v8",
   "updatedDate": "2026-10-05",
   "instruments": {
     "soprano": {
@@ -37,6 +37,10 @@
         {
           "id": "popular-bgm",
           "label": "热门 BGM"
+        },
+        {
+          "id": "anime-film",
+          "label": "动漫与影视"
         }
       ]
     },
@@ -47,6 +51,10 @@
         {
           "id": "classical",
           "label": "古典主题"
+        },
+        {
+          "id": "chinese-instrumental",
+          "label": "国乐改编"
         }
       ]
     },
@@ -3117,7 +3125,7 @@
         }
       },
       "category": "popular",
-      "subcategory": "contemporary"
+      "subcategory": "anime-film"
     },
     {
       "id": "going-home",
@@ -3246,6 +3254,274 @@
       },
       "category": "popular",
       "subcategory": "sax-classics"
+    },
+    {
+      "id": "saima",
+      "title": "赛马",
+      "english": "Horse Racing",
+      "aliases": "saima sai ma 赛马 黄海怀 Huang Haihuai 二胡 国乐",
+      "composer": "黄海怀",
+      "genre": "国乐改编",
+      "difficulty": "进阶",
+      "mode": "minor",
+      "source": {
+        "label": "Everyone Piano · 钢琴参考谱",
+        "url": "https://www.everyonepiano.cn/Music-7689.html"
+      },
+      "scoreScope": "开篇主题 · 原谱 1–42 小节",
+      "description": "42 小节开篇主题，单声部提取最高旋律，省略钢琴伴奏及二胡炫技段；按 D 小调记谱。十六分音符可先慢速练习。",
+      "rights": "依据用户确认已协商的公开发布授权整理；作品权利归原权利人。",
+      "concertKey": "D 小调",
+      "meterText": "2/4",
+      "measureCount": 42,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 小调",
+          "writtenMidiRange": [
+            64,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/saima/soprano/score.pdf",
+          "musicxml": "scores/saima/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/saima/soprano/page-1.png"
+            },
+            {
+              "number": 2,
+              "firstMeasure": 33,
+              "lastMeasure": 42,
+              "image": "scores/saima/soprano/page-2.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 小调",
+          "writtenMidiRange": [
+            59,
+            71
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/saima/alto/score.pdf",
+          "musicxml": "scores/saima/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/saima/alto/page-1.png"
+            },
+            {
+              "number": 2,
+              "firstMeasure": 33,
+              "lastMeasure": 42,
+              "image": "scores/saima/alto/page-2.png"
+            }
+          ]
+        }
+      },
+      "category": "instrumental",
+      "subcategory": "chinese-instrumental"
+    },
+    {
+      "id": "detective-conan",
+      "title": "名侦探柯南",
+      "english": "Detective Conan Main Theme",
+      "aliases": "mingzhentankenan kenan conan case closed Detective Conan 大野克夫 Katsuo Ohno 动漫 柯南",
+      "composer": "大野克夫",
+      "genre": "动漫与影视",
+      "difficulty": "进阶",
+      "mode": "minor",
+      "source": {
+        "label": "PangfunJ · 钢琴参考谱",
+        "url": "https://pangfunjstudio.com/wp-content/uploads/2020/07/case-closed-Detective-Conan.pdf"
+      },
+      "scoreScope": "经典主主题 · 原谱 9–22 小节及收束",
+      "description": "大野克夫主主题，提取钢琴旋律声部，保留切分与延音，省略倚音。原谱 9–22 小节后以 C 长音收束，共 15 小节；四分音符 120 为练习参考。",
+      "rights": "依据用户确认已协商的公开发布授权整理；作品权利归原权利人。",
+      "concertKey": "F 小调",
+      "meterText": "4/4",
+      "measureCount": 15,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "G 小调",
+          "writtenMidiRange": [
+            67,
+            79
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/detective-conan/soprano/score.pdf",
+          "musicxml": "scores/detective-conan/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 15,
+              "image": "scores/detective-conan/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "D 小调",
+          "writtenMidiRange": [
+            62,
+            74
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/detective-conan/alto/score.pdf",
+          "musicxml": "scores/detective-conan/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 15,
+              "image": "scores/detective-conan/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "anime-film"
+    },
+    {
+      "id": "carrying-you",
+      "title": "天空之城",
+      "english": "Carrying You · Castle in the Sky",
+      "aliases": "tiankongzhicheng Laputa Carrying You 君をのせて Joe Hisaishi 久石让 宫崎骏 动漫",
+      "composer": "久石让",
+      "genre": "动漫与影视",
+      "difficulty": "基础",
+      "mode": "minor",
+      "source": {
+        "label": "Gavin Libotte · 吉他参考谱",
+        "url": "https://static1.squarespace.com/static/560104c1e4b0ead07ebb779f/t/60f0f5147c30ad68c63c7e79/1626404119770/laputa%2Bcastle%2Bin%2Bthe%2Bsky%2B.pdf"
+      },
+      "scoreScope": "主题两段 · 弱起及原谱 1–32 小节",
+      "description": "提取吉他谱的实音主旋律，省略伴奏；第 28 小节用长音保留旋律，第 32 小节末弱起改为休止以收束，省略 D.C. 与尾声反复。四分音符 88 为练习参考。",
+      "rights": "依据用户确认已协商的公开发布授权整理；作品权利归原权利人。",
+      "concertKey": "E 小调",
+      "meterText": "4/4",
+      "measureCount": 33,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "F♯ 小调",
+          "writtenMidiRange": [
+            61,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/carrying-you/soprano/score.pdf",
+          "musicxml": "scores/carrying-you/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 33,
+              "image": "scores/carrying-you/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "C♯ 小调",
+          "writtenMidiRange": [
+            68,
+            85
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/carrying-you/alto/score.pdf",
+          "musicxml": "scores/carrying-you/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 33,
+              "image": "scores/carrying-you/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "anime-film"
+    },
+    {
+      "id": "always-with-me",
+      "title": "永远同在",
+      "english": "Always With Me · Spirited Away",
+      "aliases": "yongyuantongzai qiany uqianxun qianyuqianxun 千与千寻 千と千尋 いつも何度でも Yumi Kimura 木村弓 宫崎骏 动漫",
+      "composer": "木村弓",
+      "genre": "动漫与影视",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "Lou Xiao Ping · 长笛二重奏参考谱",
+        "url": "https://cgflute.com/wp-content/uploads/2017/10/always_with_me_spirited_away.pdf"
+      },
+      "scoreScope": "千与千寻主题 · 主旋律一遍",
+      "description": "提取长笛二重奏上声部并降低八度，保留弱起、附点及十六分连接句；演奏主段一遍，第二房结尾缩为两拍 G 长音，省略反复。四分音符 96 为练习参考。",
+      "rights": "依据用户确认已协商的公开发布授权整理；作品权利归原权利人。",
+      "concertKey": "G 大调",
+      "meterText": "3/4",
+      "measureCount": 33,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/always-with-me/soprano/score.pdf",
+          "musicxml": "scores/always-with-me/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 33,
+              "image": "scores/always-with-me/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            59,
+            73
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/always-with-me/alto/score.pdf",
+          "musicxml": "scores/always-with-me/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 33,
+              "image": "scores/always-with-me/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "anime-film"
     }
   ]
 }
