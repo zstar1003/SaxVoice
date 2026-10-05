@@ -26,7 +26,7 @@
     document.body.classList.toggle('catalog-open', shown);
     $('open-library').setAttribute('aria-expanded', String(shown));
     $('drawer-backdrop').hidden = !shown;
-    $('library').inert = !shown && (mobile.matches || document.body.classList.contains('focus-mode'));
+    $('library').inert = document.body.classList.contains('reader-fullscreen') || (!shown && (mobile.matches || document.body.classList.contains('focus-mode')));
     $('score-main').inert = shown;
     if (shown) {
       $('library').setAttribute('role', 'dialog');
@@ -159,7 +159,8 @@
     });
     $('page-select').replaceChildren(...part.pages.map((_, index) => new Option(`${index + 1} / ${part.pages.length}`, index + 1)));
     $('page-select').disabled = part.pages.length === 1;
-    $('zoom-score').disabled = false;
+    $('fullscreen-score').disabled = false;
+    text('fullscreen-title', `${p.title} · ${state.catalog.instruments[state.instrument].label}`);
     $('share-score').disabled = false;
     $('share-status').hidden = true;
     showPage(state.page);
@@ -198,10 +199,58 @@
   $('previous-page').addEventListener('click', () => showPage(state.page - 1, true));
   $('next-page').addEventListener('click', () => showPage(state.page + 1, true));
   $('page-select').addEventListener('change', event => showPage(event.target.value, true));
-  $('zoom-score').addEventListener('click', () => {
-    const zoom = $('score-scroll').classList.toggle('zoomed');
-    $('zoom-score').setAttribute('aria-pressed', String(zoom));
-    text('zoom-score', zoom ? '还原' : '放大');
+  const reader = $('score-viewer');
+  let fullscreenRevision = 0;
+  const isFullscreen = () => reader.classList.contains('fullscreen-reader');
+  function fullscreenFocusables() {
+    return [...reader.querySelectorAll('button:not(:disabled), select:not(:disabled), a[href], [tabindex="0"]')].filter(e => e.checkVisibility());
+  }
+  function setFullscreen(active) {
+    reader.classList.toggle('fullscreen-reader', active);
+    document.body.classList.toggle('reader-fullscreen', active);
+    (active ? reader : document.body).append($('share-status'));
+    $('fullscreen-score').setAttribute('aria-pressed', String(active));
+    text('fullscreen-score', active ? '退出' : '全屏');
+    $('fullscreen-score').setAttribute('aria-label', active ? '退出全屏' : '全屏显示曲谱');
+    $('library').inert = active || mobile.matches || document.body.classList.contains('focus-mode');
+    document.querySelector('.site-header').inert = active;
+    for (const el of document.querySelectorAll('.piece-heading, .edition-row, .edition-details')) el.inert = active;
+    $('score-scroll').scrollTo(0, 0);
+    if (!active) {
+      reader.classList.remove('fit-page');
+      $('fit-page').setAttribute('aria-pressed', 'false');
+      text('fit-page', '整页');
+    }
+    $('fullscreen-score').focus({preventScroll: true});
+  }
+  async function exitFullscreen() {
+    ++fullscreenRevision;
+    setFullscreen(false);
+    if (document.fullscreenElement === reader) {
+      try { await document.exitFullscreen(); } catch { /* The browser can exit before this request. */ }
+    }
+  }
+  $('fullscreen-score').addEventListener('click', async () => {
+    if (isFullscreen()) { await exitFullscreen(); return; }
+    const revision = ++fullscreenRevision;
+    setFullscreen(true);
+    if (reader.requestFullscreen) {
+      try {
+        await reader.requestFullscreen();
+        // A pending native request must not re-enter after the user exits.
+        if (revision !== fullscreenRevision && document.fullscreenElement === reader) await document.exitFullscreen();
+      } catch { /* Keep the window-filling reader when native fullscreen is unavailable. */ }
+    }
+  });
+  document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement === reader) setFullscreen(true);
+    else if (isFullscreen()) { ++fullscreenRevision; setFullscreen(false); }
+  });
+  $('fit-page').addEventListener('click', () => {
+    const fit = reader.classList.toggle('fit-page');
+    $('fit-page').setAttribute('aria-pressed', String(fit));
+    text('fit-page', fit ? '适宽' : '整页');
+    $('score-scroll').scrollTo(0, 0);
   });
   $('focus-reader').addEventListener('click', () => {
     const focused = document.body.classList.toggle('focus-mode');
@@ -230,6 +279,15 @@
       }
       return;
     }
+    if (isFullscreen()) {
+      if (event.key === 'Escape') { event.preventDefault(); exitFullscreen(); return; }
+      if (event.key === 'Tab') {
+        const controls = fullscreenFocusables(), first = controls[0], last = controls.at(-1);
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+      if (event.key === '/') { event.preventDefault(); return; }
+    }
     if (event.target.tagName === 'SUMMARY') return;
     if (!state.catalog || event.altKey || event.ctrlKey || event.metaKey || /^(INPUT|SELECT|TEXTAREA)$/.test(event.target.tagName) || event.target.isContentEditable) return;
     if (event.key === '/') { event.preventDefault(); if (mobile.matches) setDrawer(true); else if (!document.body.classList.contains('focus-mode')) $('song-search').focus(); }
@@ -237,7 +295,7 @@
     if (event.key === 'Escape' && document.body.classList.contains('focus-mode')) $('focus-reader').click();
   });
   window.addEventListener('popstate', () => { if (state.catalog) readURL(); });
-  fetch('./catalog.json?v=contemporary-v6').then(response => {
+  fetch('./catalog.json?v=fullscreen-v7').then(response => {
     if (!response.ok) throw new Error('Catalog unavailable');
     return response.json();
   }).then(catalog => {

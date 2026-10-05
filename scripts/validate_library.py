@@ -1,6 +1,7 @@
 """Verify all published score assets, instrument transposition, rhythms and ties."""
 import json
 import xml.etree.ElementTree as ET
+from fractions import Fraction
 from pathlib import Path
 from pypdf import PdfReader
 from reportlab.lib.pagesizes import A4
@@ -20,10 +21,24 @@ def events(path):
         key[step]=1 if fifths>=0 else -1
     for bar in root.findall('.//part/measure'):
         accidentals={}
+        triplet_group=[]
         duration=sum(int(n.findtext('duration')) for n in bar.findall('note'))
         beats=root.findtext('.//time/beats'); unit=root.findtext('.//time/beat-type')
         assert duration==int(beats)*divisions*4//int(unit) or bar.get('implicit')=='yes', (path,bar.get('number'))
         for n in bar.findall('note'):
+            modification=n.find('time-modification')
+            if modification is not None:
+                assert modification.findtext('actual-notes')=='3' and modification.findtext('normal-notes')=='2'
+                assert modification.findtext('normal-type')==n.findtext('type')
+                nominal={'whole':4,'half':2,'quarter':1,'eighth':Fraction(1,2),'16th':Fraction(1,4),'32nd':Fraction(1,8)}[n.findtext('type')]
+                assert int(n.findtext('duration'))==nominal*divisions*(Fraction(3,2) if n.find('dot') is not None else 1)*Fraction(2,3)
+                triplet_group.append(n)
+                if len(triplet_group)==3:
+                    assert triplet_group[0].find("notations/tuplet[@type='start']") is not None
+                    assert triplet_group[-1].find("notations/tuplet[@type='stop']") is not None
+                    triplet_group=[]
+            else:
+                assert not triplet_group, (path,bar.get('number'),'incomplete triplet')
             p=n.find('pitch')
             pitch=None if p is None else 12*(int(p.findtext('octave'))+1)+PC[p.findtext('step')]+int(p.findtext('alter','0'))
             if pitch is not None:
@@ -40,6 +55,7 @@ def events(path):
                 assert 'start' not in previous[2], (path,bar.get('number'))
             notes.append((pitch,int(n.findtext('duration')),ties))
             previous=notes[-1]
+        assert not triplet_group
     assert 'start' not in previous[2]
     return [(None if p is None else p+trans,d,t) for p,d,t in notes],root
 

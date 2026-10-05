@@ -12,6 +12,7 @@ import re
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
+from fractions import Fraction
 import cairosvg
 import verovio
 from pypdf import PdfReader, PdfWriter
@@ -86,8 +87,8 @@ def create_xml(piece):
     element(mi, 'midi-program', 65)
     part = element(root, 'part', id='P1')
     capacity = piece['meter'][0]*16//piece['meter'][1]
-    # Keep existing editions byte-identical; finer divisions only for 32nd notes.
-    factor = 2 if any(':t' in bar for bar in piece['bars']) else 1
+    # Integer MusicXML divisions also encode triplets exactly, without rounding.
+    factor = (2 if any(':t' in bar for bar in piece['bars']) else 1) * (3 if any(re.search(r':[whqest][^\s]*3', bar) for bar in piece['bars']) else 1)
     durations = {**DURATIONS, 't': .5}
     types = {**TYPES, 't': '32nd'}
     previous = None
@@ -95,7 +96,7 @@ def create_xml(piece):
         notes = []
         for token in bar.split():
             pitch, rhythm = token.split(':')
-            n = dict(duration=durations[rhythm[0]]*(1.5 if '.' in rhythm else 1), type=types[rhythm[0]], dot='.' in rhythm, start='~' in rhythm, stop='_' in rhythm, rest=pitch=='R')
+            n = dict(duration=Fraction(durations[rhythm[0]])*(Fraction(3,2) if '.' in rhythm else 1)*(Fraction(2,3) if '3' in rhythm else 1), type=types[rhythm[0]], dot='.' in rhythm, triplet='3' in rhythm, start='~' in rhythm, stop='_' in rhythm, rest=pitch=='R')
             if pitch != 'R':
                 match = re.fullmatch(r'([A-G])([#b]?)(\d)', pitch)
                 assert match, token
@@ -126,6 +127,19 @@ def create_xml(piece):
             element(metro, 'per-minute', piece['tempo'])
             element(direction, 'sound', tempo=piece['tempo'])
         beams = {}
+        tuplets = {}
+        triplet_group = []
+        for index, n in enumerate(notes):
+            if n['triplet']:
+                triplet_group.append(index)
+                if len(triplet_group) == 3:
+                    assert len({notes[i]['type'] for i in triplet_group}) == 1
+                    tuplets[triplet_group[0]] = 'start'
+                    tuplets[triplet_group[-1]] = 'stop'
+                    triplet_group = []
+            else:
+                assert not triplet_group, (piece['id'], number, 'incomplete triplet')
+        assert not triplet_group, (piece['id'], number, 'incomplete triplet')
         # Group eighth-note meters in dotted-quarter beats (6 ticks).
         groups = compound_beams(notes, 6 if piece['meter'][1]==8 and piece['meter'][0]%3==0 else 4)
         for group in groups:
@@ -160,13 +174,20 @@ def create_xml(piece):
             element(node, 'type', n['type'])
             if n['dot']:
                 element(node, 'dot')
+            if n['triplet']:
+                modification = element(node, 'time-modification')
+                element(modification, 'actual-notes', 3)
+                element(modification, 'normal-notes', 2)
+                element(modification, 'normal-type', n['type'])
             for level, value in beams.get(index, []):
                 element(node, 'beam', value, number=level)
-            if n['stop'] or n['start']:
+            if n['stop'] or n['start'] or index in tuplets:
                 notation = element(node, 'notations')
                 for state in ('stop','start'):
                     if n[state]:
                         element(notation, 'tied', type=state)
+                if index in tuplets:
+                    element(notation, 'tuplet', type=tuplets[index], number='1', bracket='no', show_number='actual')
             previous = n
         if number == len(piece['bars']):
             element(element(measure, 'barline', location='right'), 'bar-style', 'light-heavy')
@@ -228,7 +249,10 @@ def overlay(piece, instrument, key, number, total, first, last):
     c.setFont('ScoreChinese',9)
     c.drawString(13*mm,h-34*mm,piece['composer']+'  /  '+INSTRUMENTS[instrument]['name'])
     c.setFont('ScoreChinese',8)
-    c.drawString(13*mm,h-40*mm,'记谱 '+key+'  ·  实音 '+piece['concertKey']+'  ·  '+piece['meterText'])
+    # The CJK PDF font does not contain musical flat/sharp glyphs.
+    def printed_key(value):
+        return ('降 ' if '♭' in value else '升 ' if '♯' in value else '')+value.replace('♭','').replace('♯','')
+    c.drawString(13*mm,h-40*mm,'记谱 '+printed_key(key)+'  ·  实音 '+printed_key(piece['concertKey'])+'  ·  '+piece['meterText'])
     c.setStrokeColorRGB(.7,.7,.7)
     c.line(13*mm,h-44*mm,w-13*mm,h-44*mm)
     c.setFont('ScoreChinese',8)
@@ -261,7 +285,7 @@ def engrave(piece, root, instrument, previous=None):
     (destination/'score.musicxml').write_bytes(xml)
     toolkit = verovio.toolkit()
     spacing=7 if piece['id']=='juebieshu' or piece['measureCount']>=29 else 18
-    toolkit.setOptions({'pageWidth':2100,'pageHeight':2970,'scale':100,'pageMarginTop':480,'pageMarginBottom':220,'pageMarginLeft':130,'pageMarginRight':130,'breaks':'encoded','header':'none','footer':'none','smuflTextFont':'none','spacingSystem':spacing,'systemMaxPerPage':9,'spacingLinear':.18,'spacingNonLinear':.55,'minLastJustification':0})
+    toolkit.setOptions({'pageWidth':2100,'pageHeight':2970,'scale':100,'pageMarginTop':480,'pageMarginBottom':220,'pageMarginLeft':130,'pageMarginRight':130,'breaks':'encoded','header':'none','footer':'none','smuflTextFont':'none','spacingSystem':spacing,'systemMaxPerPage':9,'spacingLinear':.18,'spacingNonLinear':.55,'minLastJustification':.8})
     assert toolkit.loadData(xml.decode())
     count = toolkit.getPageCount()
     if piece['id']=='juebieshu':
@@ -340,7 +364,7 @@ def main():
         category=next(category for category in taxonomy if group in category['groups'])
         piece.update(category=category['id'],subcategory=group['id'])
     categories=[{**category,'groups':[{k:v for k,v in group.items() if k!='pieces'} for group in category['groups']]} for category in taxonomy]
-    (SITE/'catalog.json').write_text(json.dumps(dict(version='contemporary-v6',updatedDate='2026-10-05',instruments=INSTRUMENTS,categories=categories,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
+    (SITE/'catalog.json').write_text(json.dumps(dict(version='fullscreen-v7',updatedDate='2026-10-05',instruments=INSTRUMENTS,categories=categories,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
     print(f'Built {len(pieces)} pieces / {len(pieces)*len(INSTRUMENTS)} editions')
 
 

@@ -89,7 +89,7 @@ h1 { font-size: 36px; font-weight: 650; line-height: 1.2; letter-spacing: -1px; 
 .tool-button[aria-pressed="true"] { background: #e5effa; color: var(--blue); }
 .score-scroll { overflow: auto; padding: 10px 22px 6px; }
 .score-scroll img { display: block; width: 100%; height: auto; background: #fff; box-shadow: 0 2px 8px #0000000b; }
-.score-scroll.zoomed img { width: 1100px; max-width: none; }
+
 .reader-bottom { display: flex; justify-content: space-between; padding: 13px 24px 17px; color: #909097; font-size: 10px; }
 .edition-details { margin: 23px 0 0; border-bottom: 1px solid #ededf0; }
 .edition-details summary { list-style: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; color: var(--muted); padding: 14px 0; font-size: 12px; }
@@ -157,7 +157,6 @@ h1 { font-size: 36px; font-weight: 650; line-height: 1.2; letter-spacing: -1px; 
   .page-controls select { min-width: 49px; font-size: 10px; }
   .reader-tools { gap: 0; }
   .score-scroll { padding: 7px 9px 0; }
-  .score-scroll.zoomed img { width: 1000px; }
   .reader-bottom { padding: 12px 12px 14px; font-size: 9px; }
   .edition-details { margin-top: 12px; }
   .toast { max-width: calc(100vw - 36px); white-space: normal; text-align: center; width: max-content; }
@@ -166,6 +165,20 @@ h1 { font-size: 36px; font-weight: 650; line-height: 1.2; letter-spacing: -1px; 
   .focus-mode h1 { font-size: 25px; }
 }
 @media (max-width: 360px) { .score-meta { flex-direction: column; align-items: end; gap: 0; } .score-meta > span:nth-child(2) { display: none; } .tool-button { padding: 6px; } .score-area { padding-left: 12px; padding-right: 12px; } }
+/* Keep the reader usable on devices without the native Fullscreen API. */
+#fit-page, .fullscreen-title { display: none; }
+.reader-fullscreen { overflow: hidden; }
+.reader.fullscreen-reader { position: fixed; inset: 0; z-index: 90; width: 100%; height: 100dvh; border: 0; border-radius: 0; display: flex; flex-direction: column; }
+.reader.fullscreen-reader .reader-toolbar { position: relative; top: 0; flex: 0 0 auto; margin: max(8px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) 4px max(12px,env(safe-area-inset-left)); }
+.fullscreen-reader .fullscreen-title { display: block; font-size: 12px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex: 1; }
+.fullscreen-reader #focus-reader { display: none; }
+.fullscreen-reader #fit-page { display: inline-flex; }
+.reader.fullscreen-reader .score-scroll { flex: 1; min-height: 0; padding: 8px max(12px,env(safe-area-inset-right)) 0 max(12px,env(safe-area-inset-left)); overscroll-behavior: contain; }
+.fullscreen-reader .score-scroll img { width: min(1400px,100%); margin: 0 auto; }
+.reader.fullscreen-reader.fit-page .score-scroll { display: flex; align-items: center; justify-content: center; padding-bottom: 4px; }
+.fullscreen-reader.fit-page .score-scroll img { width: auto; height: auto; max-height: 100%; max-width: 100%; object-fit: contain; }
+.reader.fullscreen-reader .reader-bottom { padding: 6px max(16px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left)); flex: 0 0 auto; }
+@media (max-width: 760px) { .fullscreen-reader .fullscreen-title { display: none; } .reader.fullscreen-reader .reader-toolbar { margin-left: 4px; margin-right: 4px; } .reader.fullscreen-reader .score-scroll { padding-left: max(4px,env(safe-area-inset-left)); padding-right: max(4px,env(safe-area-inset-right)); } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 @page { size: A4 portrait; margin: 0; }
-@media print { html,body { background: #fff; margin: 0 !important; padding: 0 !important; } body > * { display: none !important; } .print-pages { display: block !important; width: 210mm; } .print-pages img { display: block; width: 210mm; height: 297mm; break-after: page; page-break-after: always; } .print-pages img:last-child { break-after: auto; page-break-after: auto; } }
+@media print { html,body { background: #fff; overflow: visible !important; margin: 0 !important; padding: 0 !important; } body > * { display: none !important; } .print-pages { display: block !important; width: 210mm; } .print-pages img { display: block; width: 210mm; height: 297mm; break-after: page; page-break-after: always; } .print-pages img:last-child { break-after: auto; page-break-after: auto; } }

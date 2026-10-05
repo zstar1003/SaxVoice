@@ -66,3 +66,15 @@
 | 莫里亚尔塔之舞 / Danse Morialta | [作曲者发布页](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200026) | Danse_Morialta_v2.pdf（参考排版 Gavin Stevens）；钢琴主题 5–32 小节，旋律下降八度；和弦取最高音，省略短倚音，保留临时降号和结尾延音。 |
 
 人工复核了小猴子主题结尾的 F–E–D–C 下降音型、晶莹溪流第 2/6 小节的四连八分音符及高音跳跃、前路漫漫弱起与 A5 高潮、莫里亚尔塔之舞半音与连结尾。高音和中音以同一旋律生成，节奏、临时记号和移调通过曲库校验。主题反复按演奏页展开，Fluffing a Duck 去除整小节等待并改作主题练习段。
+
+## 萨克斯经典与电影主题（fullscreen-v7）
+
+2026-10-05，用户在本次会话明确说明这批作品的版权“已经协商过了”，并要求直接加入站内曲谱。依据该授权声明，重新录入旋律，生成高音与中音两版；不将第三方作品标记为公共领域、CC 或 MIT。参考 PDF 仅保存于被 Git 忽略的 output 研究目录，发布的是重新排版的单声部谱。
+
+| 曲目 | 参考谱面 | 编选与音区处理 |
+| --- | --- | --- |
+| 圣诞快乐，劳伦斯先生 | [钢琴谱，Igor Kratovic 编配](https://static1.squarespace.com/static/63bbcc6f3545291f92147f1c/t/656f94996bb0735a5328e2f4/1701811353148/Merry%2BChristmas%2C%2BMr.%2BLawrence.pdf) | 原谱 1–32 小节，前奏与首段主题；提取最高旋律声部，省略伴奏及和弦内声部。前奏 8va 降八度；17–24 小节与第 32 小节末两个低音升八度，适配萨克斯音区。保留三连音，实音降 D 大调。原谱 Andante，四分音符 80 为练习参考。 |
+| 回家 / Going Home | [中音谱，David Scollin 记谱](https://smoothjazzbackingtracks.com/SJProTracksClubSheets/GoingHomeKennyGAlto.pdf) | 原谱 9–29 小节的开篇主题，共 21 小节；省略开头等待和自由装饰音，保留切分、延音与十六分节奏。中音记谱 E 大调，实音 G 大调；高音领奏采用比参考中音实音高八度的音区。 |
+| 无心快语 / Careless Whisper | [Sax School，中音谱，Nigel McGill 记谱](https://saxschoolonline.com/wp-content/uploads/2015/06/Careless-Whisper-Alto-Saxophone.pdf) | 原谱 2–18 小节的萨克斯开场独奏，共 17 小节；省略第 1 小节半音上行装饰及倚音，保留两遍主题和连接句。中音记谱 B 小调，高音记谱 E 小调，实音 D 小调。四分音符 150，按参考谱的速度标示。 |
+
+这三首为编选主题/独奏段，不是全曲伴奏跟奏版；不含歌词、原录音或伴奏。目录新增“流行与当代 › 萨克斯名曲”，电影主题归入轻音乐。当前曲库 49 首、98 版、102 页。

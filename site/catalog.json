@@ -1,5 +1,5 @@
 {
-  "version": "contemporary-v6",
+  "version": "fullscreen-v7",
   "updatedDate": "2026-10-05",
   "instruments": {
     "soprano": {
@@ -26,6 +26,10 @@
       "id": "popular",
       "label": "流行与当代",
       "groups": [
+        {
+          "id": "sax-classics",
+          "label": "萨克斯名曲"
+        },
         {
           "id": "contemporary",
           "label": "轻音乐"
@@ -3050,6 +3054,198 @@
       },
       "category": "popular",
       "subcategory": "contemporary"
+    },
+    {
+      "id": "merry-christmas-mr-lawrence",
+      "title": "圣诞快乐，劳伦斯先生",
+      "english": "Merry Christmas, Mr. Lawrence",
+      "aliases": "shengdankuaile laolunsixiansheng 坂本龙一 Ryuichi Sakamoto 战场上的圣诞快乐",
+      "composer": "坂本龙一",
+      "genre": "电影音乐",
+      "difficulty": "进阶",
+      "mode": "major",
+      "source": {
+        "label": "钢琴旋律对照 · Igor Kratovic 编配",
+        "url": "https://static1.squarespace.com/static/63bbcc6f3545291f92147f1c/t/656f94996bb0735a5328e2f4/1701811353148/Merry%2BChristmas%2C%2BMr.%2BLawrence.pdf"
+      },
+      "scoreScope": "前奏与首段主题 · 原谱 1–32 小节",
+      "description": "三连音前奏与首段主题。提取钢琴上声部；前奏的 8va 降低八度，原谱 17–24 小节及第 32 小节低音提高八度，适配萨克斯音域。速度为练习参考。",
+      "rights": "依据用户确认已协商的公开发布授权整理；作品权利归原权利人。",
+      "concertKey": "D♭ 大调",
+      "meterText": "4/4",
+      "measureCount": 32,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E♭ 大调",
+          "writtenMidiRange": [
+            72,
+            87
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/merry-christmas-mr-lawrence/soprano/score.pdf",
+          "musicxml": "scores/merry-christmas-mr-lawrence/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/merry-christmas-mr-lawrence/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B♭ 大调",
+          "writtenMidiRange": [
+            67,
+            82
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/merry-christmas-mr-lawrence/alto/score.pdf",
+          "musicxml": "scores/merry-christmas-mr-lawrence/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/merry-christmas-mr-lawrence/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "contemporary"
+    },
+    {
+      "id": "going-home",
+      "title": "回家",
+      "english": "Going Home",
+      "aliases": "huijia hui jia Kenny G 肯尼基 肯尼吉 萨克斯名曲",
+      "composer": "Kenny G",
+      "genre": "萨克斯名曲",
+      "difficulty": "进阶",
+      "mode": "major",
+      "source": {
+        "label": "中音参考谱 · David Scollin 记谱",
+        "url": "https://smoothjazzbackingtracks.com/SJProTracksClubSheets/GoingHomeKennyGAlto.pdf"
+      },
+      "scoreScope": "开篇主题 · 原谱 9–29 小节",
+      "description": "21 小节开篇主题，保留切分与延音线，省略自由装饰音；实音 G 大调，选取适合高音领奏的八度。",
+      "rights": "依据用户确认已协商的公开发布授权整理；作品权利归原权利人。",
+      "concertKey": "G 大调",
+      "meterText": "4/4",
+      "measureCount": 21,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            69,
+            85
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/going-home/soprano/score.pdf",
+          "musicxml": "scores/going-home/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 21,
+              "image": "scores/going-home/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            64,
+            80
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/going-home/alto/score.pdf",
+          "musicxml": "scores/going-home/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 21,
+              "image": "scores/going-home/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "sax-classics"
+    },
+    {
+      "id": "careless-whisper",
+      "title": "无心快语",
+      "english": "Careless Whisper",
+      "aliases": "wuxinkua yu wuxinkuaiyu 无心低语 无心细语 威猛 Wham George Michael Andrew Ridgeley 经典萨克斯",
+      "composer": "George Michael / Andrew Ridgeley",
+      "genre": "萨克斯名曲",
+      "difficulty": "进阶",
+      "mode": "minor",
+      "source": {
+        "label": "Sax School · Nigel McGill 记谱",
+        "url": "https://saxschoolonline.com/wp-content/uploads/2015/06/Careless-Whisper-Alto-Saxophone.pdf"
+      },
+      "scoreScope": "萨克斯开场独奏 · 原谱 2–18 小节",
+      "description": "经典萨克斯开场独奏，保留两遍主题与连接句；省略原谱第 1 小节上行装饰和倚音。速度按四分音符标示。",
+      "rights": "依据用户确认已协商的公开发布授权整理；作品权利归原权利人。",
+      "concertKey": "D 小调",
+      "meterText": "4/4",
+      "measureCount": 17,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 小调",
+          "writtenMidiRange": [
+            59,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/careless-whisper/soprano/score.pdf",
+          "musicxml": "scores/careless-whisper/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/careless-whisper/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 小调",
+          "writtenMidiRange": [
+            66,
+            85
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/careless-whisper/alto/score.pdf",
+          "musicxml": "scores/careless-whisper/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/careless-whisper/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "sax-classics"
     }
   ]
 }

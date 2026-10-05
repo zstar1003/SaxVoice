@@ -1,106 +1,65 @@
 # SaxVoice
 
-浅色、简洁的萨克斯曲谱阅读器，使用金色萨克斯矢量图标，提供浏览器与 iOS 主屏幕图标。桌面侧栏选曲，手机抽屉选曲，版本说明默认折叠；支持专注阅读、中文／英文／拼音／作曲家搜索、两级分类目录、乐器版本切换、翻页、放大、A4 下载与打印、当前谱页分享链接。
+简洁的萨克斯曲谱库。按分类选曲、搜索曲目，切换高音与中音版本，在浏览器中全屏阅读，或下载 A4 曲谱练习。
 
-- [在线曲库](https://xdxsb.top/SaxVoice/)
-- [《诀别书》高音版](https://xdxsb.top/SaxVoice/?song=juebieshu&instrument=soprano)
-- [《诀别书》中音版](https://xdxsb.top/SaxVoice/?song=juebieshu&instrument=alto)
+[在线曲库](https://xdxsb.top/SaxVoice/)
 
-GitHub Pages 使用账号已有自定义域名。推送 `main` 后自动发布 `site/`。
+## 功能
+
+- 中文、英文、拼音、作曲家与分类搜索，支持折叠的两级目录。
+- 降 B 高音与降 E 中音版本，各自标明记谱调、实音调与音区。
+- 一键全屏：默认适宽显示，可切换整页；保留翻页、打印与分享，按 Esc 退出。不支持原生全屏的浏览器使用窗口全屏阅读。
+- A4 矢量 PDF、可编辑 MusicXML 和谱页预览。
+- 桌面侧栏、手机选曲抽屉、专注阅读与当前页分享链接。
+- 金色萨克斯图标，支持浏览器标签与 iOS 主屏幕。
 
 ## 曲库
 
-当前 46 首曲目、92 个乐器版本，共 96 页 A4 矢量 PDF。每个版本均有 MusicXML 与从 PDF 渲染的网页预览。
+当前 **49 首曲目、98 个乐器版本、102 页 A4 曲谱**。包括流行与当代、器乐与古典、民谣与传统、节庆与颂歌、入门练习，共 5 个一级分类、11 个二级分组。
 
-| 曲目 | 范围 | 每个版本页数 |
-| --- | --- | --- |
-| 诀别书 | 109 小节完整单声部旋律，保留已确认的高音版 | 3 |
-| 奇异恩典 | 完整传统旋律，含弱起与延音线 | 1 |
-| 绿袖子 | 完整传统旋律，6/8 拍 | 1 |
-| 友谊地久天长 | 传统主歌与副歌旋律 | 1 |
-| 小星星 | 完整 24 小节旋律 | 1 |
-| 两只老虎 | 完整法国轮唱旋律 | 1 |
-| 欢乐颂 | 16 小节主题旋律版 | 1 |
-| 摇篮曲 | 勃拉姆斯 Op.49 No.4 主题旋律 | 1 |
-| 金发少女 | 16 个记谱小节的单声部旋律 | 1 |
-| 安妮·劳丽 | 17 个记谱小节的单声部旋律 | 1 |
-| 洛蒙德湖 | 17 个记谱小节的单声部旋律 | 1 |
-| 我的邦尼 | 33 个记谱小节的单声部旋律 | 1 |
-| 克莱门汀 | 17 个记谱小节的单声部旋律 | 1 |
-| 故乡的亲人 | 24 个记谱小节的单声部旋律 | 1 |
-| 红河谷 | 17 个记谱小节的单声部旋律 | 1 |
-| 桑塔·露琪亚 | 32 个记谱小节的单声部旋律 | 1 |
-| 斯卡布罗集市 | 18 个记谱小节的单声部旋律 | 1 |
-| 平安夜 | 24 个记谱小节的单声部旋律 | 1 |
-| 圣者的行进 | 17 个记谱小节的单声部旋律 | 1 |
-| 铃儿响叮当 | 32 个记谱小节的单声部旋律 | 1 |
-| 生日快乐 | 9 个记谱小节的单声部旋律 | 1 |
-| 伦敦桥 | 8 个记谱小节的单声部旋律 | 1 |
-| 玛丽有只小羊羔 | 16 个记谱小节的单声部旋律 | 1 |
-| 划小船 | 8 个记谱小节的单声部旋律 | 1 |
-| 珍重再见 | 9 个记谱小节的单声部旋律 | 1 |
-| 扬基歌 | 16 个记谱小节的单声部旋律 | 1 |
-| 康普镇赛马 | 17 个记谱小节的单声部旋律 | 1 |
-| 晚安，姑娘们 | 12 个记谱小节的单声部旋律 | 1 |
-| 无心的爱 | 16 个记谱小节的单声部旋律 | 1 |
-| 装饰大厅 | 16 个记谱小节的单声部旋律 | 1 |
-| 圣诞树 | 13 个记谱小节的单声部旋律 | 1 |
-| 普世欢腾 | 20 个记谱小节的单声部旋律 | 1 |
-| 牧场上的家 | 33 个记谱小节的单声部旋律 | 1 |
-| 迈克尔，划船靠岸 | 9 个记谱小节的单声部旋律 | 1 |
-| 老麦克唐纳有个农场 | 16 个记谱小节的单声部旋律 | 1 |
-| 鼬鼠蹦出来 | 16 个记谱小节的单声部旋律 | 1 |
-| 简单的礼物 | 17 个记谱小节的单声部旋律 | 1 |
-| 伏尔加船夫曲 | 22 个记谱小节的单声部旋律 | 1 |
-| 轻轻摇摆，甜蜜的马车 | 24 个记谱小节的单声部旋律 | 1 |
-| 祝你圣诞快乐 | 25 个记谱小节的单声部旋律 | 1 |
-| 小猴子转圈圈（Monkeys Spinning Monkeys） | 16 小节主题旋律 | 1 |
-| 鸭子抖毛（Fluffing a Duck） | 12 小节主题旋律 | 1 |
-| 鬼鬼祟祟（Sneaky Snitch） | 8 小节主题旋律 | 1 |
-| 前路漫漫（Long Road Ahead） | 17 小节主题旋律 | 1 |
-| 晶莹溪流（Brittle Rille） | 16 小节主题旋律 | 1 |
-| 莫里亚尔塔之舞（Danse Morialta） | 28 小节主题旋律 | 1 |
+| 精选曲目 | 本站版本 |
+| --- | --- |
+| [圣诞快乐，劳伦斯先生](https://xdxsb.top/SaxVoice/?song=merry-christmas-mr-lawrence) | 三连音前奏与首段主题，32 小节 |
+| [回家 / Going Home](https://xdxsb.top/SaxVoice/?song=going-home) | 开篇萨克斯主题，21 小节 |
+| [无心快语 / Careless Whisper](https://xdxsb.top/SaxVoice/?song=careless-whisper) | 萨克斯开场独奏，17 小节 |
+| 奇异恩典、绿袖子、友谊地久天长 | 传统旋律 |
+| 欢乐颂、勃拉姆斯摇篮曲 | 古典主题 |
+| 小猴子转圈圈、鸭子抖毛、鬼鬼祟祟 | 热门 BGM 主题 |
 
-曲库包括《诀别书》、三十九首公共领域历史旋律，以及六首 Kevin MacLeod 的 CC BY 4.0 当代作品主题。历史曲目从主旋律重新录入；当代曲目按作曲者发布谱提取主题、选择音区并重新制谱，采用范围在曲谱信息与 PDF 中标明。参考版本与录入说明见 [来源记录](docs/library-sources.md)。这些是单声部萨克斯旋律谱。
+本站提供单声部萨克斯旋律谱。各曲的编选范围、音区处理与参考版本在曲谱信息中说明；主题版按段落编选，不作为完整录音的伴奏时间轴。来源与版本记录见 [library-sources.md](docs/library-sources.md)。
 
-一级分类为流行与当代、器乐与古典、民谣与传统、节庆与颂歌、入门练习，共 10 个二级分组。流行与当代下设轻音乐和热门 BGM。目录可折叠，当前曲目分支默认展开；搜索按曲目、英文、拼音、作者及分类匹配，并自动展开结果。
+高音谱实音低大二度，中音谱实音低大六度；中音按旋律选择合适八度。制谱校验各小节时值、延音线、临时记号、移调与 B♭3–F♯6 常规记谱音域。
 
-## 乐器与音区
+## 本地预览与部署
 
-- 高音：降 B，MusicXML 实音低大二度。
-- 中音：降 E，MusicXML 实音低大六度。
-
-只提供高音和中音两个版本；旧的次中音分享链接自动转到同曲高音版，保留页码。中音移调独立生成，通常使用比高音低八度的实音音区；部分曲目的中音版为避免超出低音域，采用与高音版相同的实音八度，具体音区显示在曲谱信息中。网页、PDF 和 MusicXML 均正确标明各自乐器。所有版本写谱音域检查在 B♭3–F♯6 内。
-
-《诀别书》高音 PDF 和 MusicXML 保持原文件不变。中音由该版记谱下降纯四度，记谱 B 小调，实音为 D 小调。49–64 小节的八度处理保留；高音对照版继续可下载。原发行母带及钢琴各声部尚未完成全曲逐音校对，范围见 [校对记录](docs/music-review.md)。
-
-## 本地预览
-
-网站为原生 HTML/CSS/JavaScript，无前端运行依赖。
+原生 HTML/CSS/JavaScript，无前端运行依赖。
 
 ```sh
 python3 -m http.server 8000 --directory site
 ```
 
-[GitHub Actions](.github/workflows/pages.yml) 在推送 main 后自动部署。
+GitHub Pages 通过 [GitHub Actions](.github/workflows/pages.yml) 发布 `site/`。推送 `main` 后自动部署，在线站点使用账号已有自定义域名。
 
-## 制谱与新增曲目
+## 新增曲目与制谱
 
-Python 需要 `verovio`、`cairosvg`、`pypdf`、`reportlab`，以及 Poppler 的 `pdftoppm`。
+1. 在 [scores/library.json](scores/library.json) 填写曲名、实音旋律、拍号、调号、时值、编选范围和参考版本。
+2. 在 [scores/categories.json](scores/categories.json) 将曲目 ID 加入二级分组。
+3. 生成乐器版本并运行校验；前端自动从 [site/catalog.json](site/catalog.json) 加载。
+
+Python 依赖：`verovio`、`cairosvg`、`pypdf`、`reportlab`；预览渲染使用 Poppler `pdftoppm`。
 
 ```sh
-python scripts/build_score.py     # 仅在修改《诀别书》基础高音谱时执行
-python scripts/build_library.py   # 生成高音与中音两版曲库，复用音符未变的现有文件
-python scripts/build_library.py --rebuild jingle-bells # 重排指定曲目
+python scripts/build_library.py
+python scripts/build_library.py --rebuild going-home # 重新排版指定曲目
 python scripts/validate_library.py
 ```
 
-新增曲目追加到 [scores/library.json](scores/library.json)，填写旋律、小节、实音调号、拍号、弱起／结尾时值和来源，并在 [scores/categories.json](scores/categories.json) 的一级类别与二级分组中登记曲目 ID，运行曲库脚本即可。前端从 [site/catalog.json](site/catalog.json) 加载曲目，无需逐首修改 HTML。
+音符示例：`F#4:e.` 为附点八分音符，`Bb4:q` 为降 B 四分音符，`R:e` 为八分休止符；`G4:h.~` 开始延音线，`G4:h_` 结束延音线。时值使用 `w/h/q/e/s/t`，其中 `t` 为三十二分音符；`e3` 表示八分音符三连音，连续三个为一组。弱起与尾小节以 ticks 声明，四分音符为 4 ticks。未改变记谱的现有文件会直接复用。
 
-音符格式：`F#4:e.` 为附点八分音符，`Bb4:q` 为降 B 四分音符，`R:e` 为八分休止符，`G4:h.~` 开始延音线，`G4:h_` 结束延音线。时值使用 `w/h/q/e/s/t`（`t` 为三十二分音符）；弱起小节及尾小节单独声明 ticks（四分音符为 4）。脚本校验小节总时值、延音线、各乐器移调、常规记谱音域及 A4 矢量文件。
-
-默认中文字体为 macOS STHeiti Light，可用 `SAXVOICE_SCORE_FONT` 指定其他兼容 TTF/TTC。可用 `SAXVOICE_PDFTOPPM` 指定 Poppler 路径。乐谱符号使用 Verovio Leipzig 字形，许可见 [Leipzig license](site/scores/juebieshu/Leipzig-LICENSE.txt)。
+中文 PDF 字体可通过 `SAXVOICE_SCORE_FONT` 指定，Poppler 路径可通过 `SAXVOICE_PDFTOPPM` 指定。乐谱符号采用 Verovio Leipzig 字形，许可见 [Leipzig license](site/scores/juebieshu/Leipzig-LICENSE.txt)。
 
 ## 许可与隐私
 
-网站代码采用 [MIT](LICENSE)。音乐与曲谱发布依据见 [sources.md](docs/sources.md)，MIT 不自动覆盖第三方音乐或曲谱。网站源码不加入分析脚本、外部播放器或远程字体；谱页及文件从本站加载。域名托管层可能注入其独立脚本。
+网站代码采用 [MIT](LICENSE)；第三方音乐与曲谱依据各自发布授权或许可，记录见 [sources.md](docs/sources.md) 与 [library-sources.md](docs/library-sources.md)。MIT 不覆盖第三方作品。
+
+网站源码没有分析脚本、外部播放器或远程字体，谱页与文件从本站加载。域名托管层可能注入其独立脚本。
