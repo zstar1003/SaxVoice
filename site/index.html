@@ -4,20 +4,21 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f5f7"><meta name="description" content="SaxVoice 萨克斯曲谱。搜索、阅读和下载高音、中音 A4 曲谱。">
   <meta property="og:title" content="SaxVoice · 曲谱"><meta property="og:description" content="高音、中音萨克斯曲谱。"><meta property="og:type" content="website">
-  <link rel="canonical" href="https://xdxsb.top/SaxVoice/"><link rel="icon" href="./favicon.svg?v=grouped-v5" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=grouped-v5"><title>SaxVoice · 曲谱</title>
+  <link rel="canonical" href="https://xdxsb.top/SaxVoice/"><link rel="icon" href="./favicon.svg?v=contemporary-v6" type="image/svg+xml">
+  <link rel="icon" href="./sax-icon-32.png?v=contemporary-v6" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="./sax-icon-180.png?v=contemporary-v6">
+  <link rel="stylesheet" href="./styles.css?v=contemporary-v6"><title>SaxVoice · 曲谱</title>
 </head>
 <body>
   <a class="skip-link" href="#score-viewer">跳至曲谱</a>
   <header class="site-header">
-    <div class="header-inner"><a class="brand" href="./" aria-label="SaxVoice 首页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v12.4a4.5 4.5 0 1 1-3-4.25V5l9-2v9.4a4.5 4.5 0 1 1-3-4.25V3.7"/></svg>SaxVoice</a><span class="header-divider" aria-hidden="true"></span><span class="header-label">曲谱</span><nav aria-label="主导航"><span id="piece-count">40 首</span><a href="https://github.com/zstar1003/SaxVoice" target="_blank" rel="noopener noreferrer" aria-label="GitHub 开源仓库">GitHub ↗</a><button id="open-library" type="button" aria-expanded="false" aria-controls="library">曲目 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></nav></div>
+    <div class="header-inner"><a class="brand" href="./" aria-label="SaxVoice 首页"><img src="./favicon.svg?v=contemporary-v6" alt="" width="28" height="28">SaxVoice</a><span class="header-divider" aria-hidden="true"></span><span class="header-label">曲谱</span><nav aria-label="主导航"><span id="piece-count">46 首</span><a href="https://github.com/zstar1003/SaxVoice" target="_blank" rel="noopener noreferrer" aria-label="GitHub 开源仓库">GitHub ↗</a><button id="open-library" type="button" aria-expanded="false" aria-controls="library">曲目 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></nav></div>
   </header>
   <button id="drawer-backdrop" class="drawer-backdrop" type="button" tabindex="-1" aria-label="关闭曲目目录" hidden></button>
   <div class="app-layout">
     <aside class="library-sidebar" id="library" aria-label="曲目目录">
       <div class="sidebar-heading"><h2>曲目</h2><button id="close-library" class="icon-button" type="button" aria-label="关闭曲目目录">×</button></div>
       <div class="search-field"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><label class="sr-only" for="song-search">搜索曲目、作曲家、分类或拼音</label><input id="song-search" type="search" placeholder="搜索曲目" autocomplete="off" disabled><kbd aria-hidden="true">/</kbd></div>
-      <div class="filter-row"><label class="sr-only" for="genre-filter">一级分类</label><select id="genre-filter" disabled><option value="">全部曲目</option></select><span id="result-count" aria-live="polite">40 首</span></div>
+      <div class="filter-row"><label class="sr-only" for="genre-filter">一级分类</label><select id="genre-filter" disabled><option value="">全部曲目</option></select><span id="result-count" aria-live="polite">46 首</span></div>
       <div id="song-list" class="song-list" aria-label="两级分类曲目目录"><p class="list-loading">加载中…</p></div>
       <div id="empty-results" class="empty-results" hidden><p>没有匹配的曲目</p><button id="clear-search" class="text-button" type="button">清除筛选</button></div>
     </aside>
@@ -27,17 +28,17 @@
       <section class="reader" id="score-viewer" aria-label="曲谱阅读器">
         <div class="reader-toolbar"><div class="page-controls"><button class="icon-button" id="previous-page" type="button" disabled aria-label="上一页"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12 5-5 5 5 5"/></svg></button><label for="page-select" class="sr-only">选择页码</label><select id="page-select" disabled><option value="1">1 / 3</option></select><button class="icon-button" id="next-page" type="button" disabled aria-label="下一页"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5"/></svg></button></div><div class="reader-tools"><button id="zoom-score" class="tool-button" type="button" aria-pressed="false" disabled>放大</button><button id="focus-reader" class="tool-button" type="button" aria-pressed="false">专注</button><button id="print-score" class="icon-button" type="button" disabled aria-label="打印当前曲谱" title="打印"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7V3h10v4M5 14H3V7h14v7h-2M5 11h10v6H5z"/><path d="M14 9h1"/></svg></button><button id="share-score" class="icon-button" type="button" disabled aria-label="复制当前曲谱链接" title="分享"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 12V2m-3 3 3-3 3 3M6 7H4v10h12V7h-2"/></svg></button></div></div>
         <p id="viewer-status" class="sr-only" role="status" aria-live="polite">第 1 页，第 1 至 36 小节</p>
-        <div class="score-scroll" id="score-scroll" tabindex="0" aria-label="谱页，放大后可横向滚动"><img id="score-image" src="./scores/juebieshu/page-1.png?v=grouped-v5" alt="诀别书高音萨克斯谱，第 1 页" width="1273" height="1800" fetchpriority="high"></div>
+        <div class="score-scroll" id="score-scroll" tabindex="0" aria-label="谱页，放大后可横向滚动"><img id="score-image" src="./scores/juebieshu/page-1.png?v=contemporary-v6" alt="诀别书高音萨克斯谱，第 1 页" width="1273" height="1800" fetchpriority="high"></div>
         <p id="load-error" class="load-error" role="alert" hidden>谱页加载失败，可<a id="error-pdf" href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf">打开 PDF</a>。</p>
         <div class="reader-bottom"><span id="measure-range">1–36 小节</span><span>A4</span></div>
       </section>
       <p id="catalog-error" class="load-error" role="alert" hidden>曲库加载失败。<button id="retry-catalog" type="button">重试</button></p>
       <noscript><p class="load-error">开启 JavaScript 可切换曲目。<a href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf">下载《诀别书》PDF</a></p></noscript>
-      <details class="edition-details"><summary>曲谱信息 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg></summary><div class="details-content"><p id="arrangement-note"></p><p id="instrument-note"></p><p id="verification-note"></p><p id="rights-note"></p><div class="detail-links"><a id="open-pdf" href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf" target="_blank" rel="noopener">打开 PDF ↗</a><a id="download-xml" href="./scores/juebieshu/juebieshu-soprano-bb.musicxml" download>MusicXML ↓</a><a id="source-link" target="_blank" rel="noopener noreferrer" hidden></a><a id="reference-pdf" target="_blank" rel="noopener" hidden>音区对照版 ↗</a></div><p class="print-note">打印：A4 纵向、实际大小，关闭页眉页脚。</p></div></details>
+      <details class="edition-details"><summary>曲谱信息 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg></summary><div class="details-content"><p id="arrangement-note"></p><p id="instrument-note"></p><p id="verification-note"></p><p id="rights-note"></p><div class="detail-links"><a id="open-pdf" href="./scores/juebieshu/juebieshu-soprano-bb-a4.pdf" target="_blank" rel="noopener">打开 PDF ↗</a><a id="download-xml" href="./scores/juebieshu/juebieshu-soprano-bb.musicxml" download>MusicXML ↓</a><a id="source-link" target="_blank" rel="noopener noreferrer" hidden></a><a id="license-link" target="_blank" rel="noopener noreferrer" hidden></a><a id="reference-pdf" target="_blank" rel="noopener" hidden>音区对照版 ↗</a></div><p class="print-note">打印：A4 纵向、实际大小，关闭页眉页脚。</p></div></details>
     </main>
   </div>
   <div id="share-status" class="toast" role="status" aria-live="polite" hidden></div>
   <section class="print-pages" id="print-pages" aria-label="当前曲谱的全部打印谱页"></section>
-  <script data-cfasync="false" src="./app.js?v=grouped-v5" defer></script>
+  <script data-cfasync="false" src="./app.js?v=contemporary-v6" defer></script>
 </body>
 </html>

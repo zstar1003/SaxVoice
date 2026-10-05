@@ -133,13 +133,15 @@
     document.title = `${p.title} · ${part.label} | SaxVoice`;
     text('piece-title', p.title);
     text('piece-category', `${categoryOf(p).label} / ${groupOf(p).label}`);
-    text('piece-subtitle', p.composer);
+    text('piece-subtitle', p.creditTitle ? `${p.english} · ${p.composer}` : p.composer);
     text('written-key', part.writtenKey);
     text('score-summary', `${part.pages.length} 页`);
     text('arrangement-note', p.description);
     text('instrument-note', `${part.label} · 记谱 ${part.writtenKey} · 实音 ${p.concertKey} · ${p.meterText}。${part.soundingOctaveOffset === 0 ? '实音按旋律基准音区。' : '实音比高音版低一个八度。'}`);
     text('verification-note', p.verificationNote || '单声部旋律版，包含各乐器的移调与八度选择。');
     text('rights-note', p.rights);
+    $('license-link').hidden = !p.license;
+    if (p.license) { $('license-link').href = p.license.url; text('license-link', `${p.license.label} ↗`); }
     for (const id of ['download-pdf', 'open-pdf', 'error-pdf']) $(id).href = `./${part.pdf}`;
     $('download-pdf').download = `${p.title}-${part.label}-A4.pdf`;
     $('download-xml').href = `./${part.musicxml}`;
@@ -235,7 +237,7 @@
     if (event.key === 'Escape' && document.body.classList.contains('focus-mode')) $('focus-reader').click();
   });
   window.addEventListener('popstate', () => { if (state.catalog) readURL(); });
-  fetch('./catalog.json?v=grouped-v5').then(response => {
+  fetch('./catalog.json?v=contemporary-v6').then(response => {
     if (!response.ok) throw new Error('Catalog unavailable');
     return response.json();
   }).then(catalog => {

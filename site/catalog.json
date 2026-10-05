@@ -1,5 +1,5 @@
 {
-  "version": "grouped-v5",
+  "version": "contemporary-v6",
   "updatedDate": "2026-10-05",
   "instruments": {
     "soprano": {
@@ -23,13 +23,23 @@
   },
   "categories": [
     {
-      "id": "instrumental",
-      "label": "器乐与古典",
+      "id": "popular",
+      "label": "流行与当代",
       "groups": [
         {
           "id": "contemporary",
-          "label": "当代器乐"
+          "label": "轻音乐"
         },
+        {
+          "id": "popular-bgm",
+          "label": "热门 BGM"
+        }
+      ]
+    },
+    {
+      "id": "instrumental",
+      "label": "器乐与古典",
+      "groups": [
         {
           "id": "classical",
           "label": "古典主题"
@@ -167,7 +177,7 @@
       },
       "comparisonRecording": "https://music.163.com/song?id=2038191895",
       "verificationNote": "核对开头、49-64小节与段落回归；与原录音同调。单声部编配含八度选择，非钢琴双手逐音转录。",
-      "category": "instrumental",
+      "category": "popular",
       "subcategory": "contemporary"
     },
     {
@@ -2626,6 +2636,420 @@
       },
       "category": "seasonal",
       "subcategory": "christmas"
+    },
+    {
+      "id": "monkeys-spinning-monkeys",
+      "title": "小猴子转圈圈",
+      "english": "Monkeys Spinning Monkeys",
+      "composer": "Kevin MacLeod",
+      "genre": "当代旋律",
+      "difficulty": "进阶",
+      "mode": "major",
+      "aliases": "xiaohouzi zhuanquanquan 猴子转圈 短视频 搞笑 BGM",
+      "description": "原长笛第一声部开头 8 小节循环主题，展开两遍；高八度标记改为萨克斯常用音区。",
+      "source": {
+        "label": "作曲者发布版本",
+        "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400011"
+      },
+      "license": {
+        "label": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "rights": "Monkeys Spinning Monkeys — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+      "scoreScope": "主题旋律",
+      "creditTitle": "Monkeys Spinning Monkeys",
+      "concertKey": "C 大调",
+      "meterText": "4/4",
+      "measureCount": 16,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/monkeys-spinning-monkeys/soprano/score.pdf",
+          "musicxml": "scores/monkeys-spinning-monkeys/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/monkeys-spinning-monkeys/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            69,
+            85
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/monkeys-spinning-monkeys/alto/score.pdf",
+          "musicxml": "scores/monkeys-spinning-monkeys/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/monkeys-spinning-monkeys/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "popular-bgm"
+    },
+    {
+      "id": "fluffing-a-duck",
+      "title": "鸭子抖毛",
+      "english": "Fluffing a Duck",
+      "composer": "Kevin MacLeod",
+      "genre": "当代旋律",
+      "difficulty": "进阶",
+      "mode": "major",
+      "aliases": "yazidoumao 鸭子 短视频 搞笑 BGM",
+      "description": "开头主题，展开第一、第二结尾并去除整小节伴奏等待；低音旋律升八度，主题重复一次。",
+      "source": {
+        "label": "作曲者发布版本",
+        "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100768"
+      },
+      "license": {
+        "label": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "rights": "Fluffing a Duck — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+      "scoreScope": "主题旋律",
+      "creditTitle": "Fluffing a Duck",
+      "concertKey": "D 大调",
+      "meterText": "4/4",
+      "measureCount": 12,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            64,
+            73
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/fluffing-a-duck/soprano/score.pdf",
+          "musicxml": "scores/fluffing-a-duck/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 12,
+              "image": "scores/fluffing-a-duck/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 大调",
+          "writtenMidiRange": [
+            59,
+            68
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/fluffing-a-duck/alto/score.pdf",
+          "musicxml": "scores/fluffing-a-duck/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 12,
+              "image": "scores/fluffing-a-duck/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "popular-bgm"
+    },
+    {
+      "id": "sneaky-snitch",
+      "title": "鬼鬼祟祟",
+      "english": "Sneaky Snitch",
+      "composer": "Kevin MacLeod",
+      "genre": "当代旋律",
+      "difficulty": "进阶",
+      "mode": "minor",
+      "aliases": "guiguichongchong guiguisuisui 鬼鬼祟祟 sneaky 搞笑 BGM",
+      "description": "原谱 9–16 小节双簧管主题；保留十六分休止、半音变化和短促节奏。",
+      "source": {
+        "label": "作曲者发布版本",
+        "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772"
+      },
+      "license": {
+        "label": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "rights": "Sneaky Snitch — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+      "scoreScope": "主题旋律",
+      "creditTitle": "Sneaky Snitch",
+      "concertKey": "D 小调",
+      "meterText": "4/4",
+      "measureCount": 8,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 小调",
+          "writtenMidiRange": [
+            75,
+            84
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/sneaky-snitch/soprano/score.pdf",
+          "musicxml": "scores/sneaky-snitch/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 8,
+              "image": "scores/sneaky-snitch/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 小调",
+          "writtenMidiRange": [
+            70,
+            79
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/sneaky-snitch/alto/score.pdf",
+          "musicxml": "scores/sneaky-snitch/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 8,
+              "image": "scores/sneaky-snitch/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "popular-bgm"
+    },
+    {
+      "id": "long-road-ahead",
+      "title": "前路漫漫",
+      "english": "Long Road Ahead",
+      "composer": "Kevin MacLeod",
+      "genre": "当代旋律",
+      "difficulty": "进阶",
+      "mode": "major",
+      "aliases": "qianlumanman 前路 轻音乐 抒情",
+      "description": "作曲者发布的长笛主题段（原谱 18–34 小节）；保留弱起、附点和高音高潮，省略重复演奏。",
+      "source": {
+        "label": "作曲者发布版本",
+        "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100588"
+      },
+      "license": {
+        "label": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "rights": "Long Road Ahead — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+      "scoreScope": "主题旋律",
+      "creditTitle": "Long Road Ahead",
+      "concertKey": "A 大调",
+      "meterText": "3/4",
+      "measureCount": 17,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "B 大调",
+          "writtenMidiRange": [
+            66,
+            83
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/long-road-ahead/soprano/score.pdf",
+          "musicxml": "scores/long-road-ahead/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/long-road-ahead/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "F♯ 大调",
+          "writtenMidiRange": [
+            61,
+            78
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/long-road-ahead/alto/score.pdf",
+          "musicxml": "scores/long-road-ahead/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/long-road-ahead/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "contemporary"
+    },
+    {
+      "id": "brittle-rille",
+      "title": "晶莹溪流",
+      "english": "Brittle Rille",
+      "composer": "Kevin MacLeod",
+      "genre": "当代旋律",
+      "difficulty": "进阶",
+      "mode": "major",
+      "aliases": "jingyingxiliu brittle rille 轻音乐 音乐盒",
+      "description": "开头 8 小节主题重复展开；多声部和弦取最高旋律音，保留切分休止，不含伴奏。",
+      "source": {
+        "label": "作曲者发布版本",
+        "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200047"
+      },
+      "license": {
+        "label": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "rights": "Brittle Rille — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+      "scoreScope": "主题旋律",
+      "creditTitle": "Brittle Rille",
+      "concertKey": "G 大调",
+      "meterText": "4/4",
+      "measureCount": 16,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            71,
+            88
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/brittle-rille/soprano/score.pdf",
+          "musicxml": "scores/brittle-rille/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/brittle-rille/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            66,
+            83
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/brittle-rille/alto/score.pdf",
+          "musicxml": "scores/brittle-rille/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/brittle-rille/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "contemporary"
+    },
+    {
+      "id": "danse-morialta",
+      "title": "莫里亚尔塔之舞",
+      "english": "Danse Morialta",
+      "composer": "Kevin MacLeod",
+      "genre": "当代旋律",
+      "difficulty": "进阶",
+      "mode": "major",
+      "aliases": "moliy aerta moliyaertazhiwu danse morialta 钢琴 轻音乐",
+      "description": "钢琴主题 5–32 小节，旋律下降八度；和弦取最高音，省略短倚音，保留临时降号和结尾延音。",
+      "source": {
+        "label": "作曲者发布版本",
+        "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200026"
+      },
+      "license": {
+        "label": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "rights": "Danse Morialta — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+      "scoreScope": "主题旋律",
+      "creditTitle": "Danse Morialta",
+      "concertKey": "C 大调",
+      "meterText": "3/4",
+      "measureCount": 28,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            69,
+            81
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/danse-morialta/soprano/score.pdf",
+          "musicxml": "scores/danse-morialta/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 28,
+              "image": "scores/danse-morialta/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/danse-morialta/alto/score.pdf",
+          "musicxml": "scores/danse-morialta/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 28,
+              "image": "scores/danse-morialta/alto/page-1.png"
+            }
+          ]
+        }
+      },
+      "category": "popular",
+      "subcategory": "contemporary"
     }
   ]
 }

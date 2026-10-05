@@ -232,7 +232,13 @@ def overlay(piece, instrument, key, number, total, first, last):
     c.setStrokeColorRGB(.7,.7,.7)
     c.line(13*mm,h-44*mm,w-13*mm,h-44*mm)
     c.setFont('ScoreChinese',8)
-    c.drawString(13*mm,14*mm,('49–64小节保留已确认的八度处理。' if piece['id']=='juebieshu' else '单声部旋律版 · SaxVoice 移调排版'))
+    c.drawString(13*mm,14*mm,('49–64小节保留已确认的八度处理。' if piece['id']=='juebieshu' else piece.get('scoreScope','单声部旋律版')+' · SaxVoice 移调排版'))
+    if piece.get('license'):
+        c.setFont('Helvetica',6.5)
+        credit=piece['creditTitle']+' / '+piece['composer']+' / incompetech.com / '+piece['license']['url']
+        assert c.stringWidth(credit,'Helvetica',6.5) < w-26*mm
+        c.drawString(13*mm,20*mm,credit)
+        c.linkURL(piece['license']['url'],(13*mm,19*mm,w-13*mm,23*mm),relative=0)
     c.setFont('Helvetica',8)
     c.drawRightString(w-13*mm,14*mm,f'A4 / {number} of {total} / bars {first}-{last}')
     c.save()
@@ -334,7 +340,7 @@ def main():
         category=next(category for category in taxonomy if group in category['groups'])
         piece.update(category=category['id'],subcategory=group['id'])
     categories=[{**category,'groups':[{k:v for k,v in group.items() if k!='pieces'} for group in category['groups']]} for category in taxonomy]
-    (SITE/'catalog.json').write_text(json.dumps(dict(version='grouped-v5',updatedDate='2026-10-05',instruments=INSTRUMENTS,categories=categories,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
+    (SITE/'catalog.json').write_text(json.dumps(dict(version='contemporary-v6',updatedDate='2026-10-05',instruments=INSTRUMENTS,categories=categories,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
     print(f'Built {len(pieces)} pieces / {len(pieces)*len(INSTRUMENTS)} editions')
 
 

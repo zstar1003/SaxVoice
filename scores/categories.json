@@ -1,6 +1,9 @@
 [
+  {"id":"popular","label":"流行与当代","groups":[
+    {"id":"contemporary","label":"轻音乐","pieces":["juebieshu","long-road-ahead","brittle-rille","danse-morialta"]},
+    {"id":"popular-bgm","label":"热门 BGM","pieces":["monkeys-spinning-monkeys","fluffing-a-duck","sneaky-snitch"]}
+  ]},
   {"id":"instrumental","label":"器乐与古典","groups":[
-    {"id":"contemporary","label":"当代器乐","pieces":["juebieshu"]},
     {"id":"classical","label":"古典主题","pieces":["ode-to-joy","brahms-lullaby"]}
   ]},
   {"id":"folk","label":"民谣与传统","groups":[

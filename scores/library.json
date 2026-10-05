@@ -1707,5 +1707,294 @@
     "endingTicks": 8,
     "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
     "aliases": "zhunisheng dankuaile zhunishengdankuaile 圣诞祝福"
+  },
+  {
+    "id": "monkeys-spinning-monkeys",
+    "title": "小猴子转圈圈",
+    "english": "Monkeys Spinning Monkeys",
+    "composer": "Kevin MacLeod",
+    "genre": "当代旋律",
+    "difficulty": "进阶",
+    "concertKeyFifths": 0,
+    "mode": "major",
+    "meter": [
+      4,
+      4
+    ],
+    "tempo": 144,
+    "bars": [
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e F#4:e",
+      "G4:q Eb4:e E4:e R:h",
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e G4:e",
+      "E5:q B4:e C5:e R:h",
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e Eb4:e",
+      "F#4:e G4:e Eb4:e E4:e R:h",
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e G4:e",
+      "F4:e E4:e D4:e C4:e R:h",
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e F#4:e",
+      "G4:q Eb4:e E4:e R:h",
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e G4:e",
+      "E5:q B4:e C5:e R:h",
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e Eb4:e",
+      "F#4:e G4:e Eb4:e E4:e R:h",
+      "G4:q Ab4:e A4:e R:e Ab4:e R:e G4:e",
+      "F4:e E4:e D4:e C4:e R:h"
+    ],
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "aliases": "xiaohouzi zhuanquanquan 猴子转圈 短视频 搞笑 BGM",
+    "description": "原长笛第一声部开头 8 小节循环主题，展开两遍；高八度标记改为萨克斯常用音区。",
+    "source": {
+      "label": "作曲者发布版本",
+      "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400011"
+    },
+    "license": {
+      "label": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "rights": "Monkeys Spinning Monkeys — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+    "scoreScope": "主题旋律",
+    "creditTitle": "Monkeys Spinning Monkeys"
+  },
+  {
+    "id": "fluffing-a-duck",
+    "title": "鸭子抖毛",
+    "english": "Fluffing a Duck",
+    "composer": "Kevin MacLeod",
+    "genre": "当代旋律",
+    "difficulty": "进阶",
+    "concertKeyFifths": 2,
+    "mode": "major",
+    "meter": [
+      4,
+      4
+    ],
+    "tempo": 122,
+    "bars": [
+      "B4:e B4:e A4:e G4:e E4:e R:q B4:e",
+      "R:e B4:e A4:e G4:e E4:e D4:e E4:e B4:e",
+      "R:e B4:e A4:e E4:e G4:e R:e G4:q",
+      "B4:e B4:e A4:e G4:e E4:e R:q B4:e",
+      "R:e B4:e A4:e G4:e E4:e D4:e E4:e B4:e",
+      "R:e B4:e A4:e E4:e G4:e G4:e G4:q",
+      "B4:e B4:e A4:e G4:e E4:e R:q B4:e",
+      "R:e B4:e A4:e G4:e E4:e D4:e E4:e B4:e",
+      "R:e B4:e A4:e E4:e G4:e R:e G4:q",
+      "B4:e B4:e A4:e G4:e E4:e R:q B4:e",
+      "R:e B4:e A4:e G4:e E4:e D4:e E4:e B4:e",
+      "R:e B4:e A4:e E4:e G4:e G4:e G4:q"
+    ],
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "aliases": "yazidoumao 鸭子 短视频 搞笑 BGM",
+    "description": "开头主题，展开第一、第二结尾并去除整小节伴奏等待；低音旋律升八度，主题重复一次。",
+    "source": {
+      "label": "作曲者发布版本",
+      "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100768"
+    },
+    "license": {
+      "label": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "rights": "Fluffing a Duck — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+    "scoreScope": "主题旋律",
+    "creditTitle": "Fluffing a Duck"
+  },
+  {
+    "id": "sneaky-snitch",
+    "title": "鬼鬼祟祟",
+    "english": "Sneaky Snitch",
+    "composer": "Kevin MacLeod",
+    "genre": "当代旋律",
+    "difficulty": "进阶",
+    "concertKeyFifths": -1,
+    "mode": "minor",
+    "meter": [
+      4,
+      4
+    ],
+    "tempo": 87,
+    "bars": [
+      "F5:e R:s E5:s D5:e F5:e E5:e R:s D5:s Db5:e R:e",
+      "R:w",
+      "F5:e R:s E5:s D5:e F5:e E5:e R:s D5:s Db5:e R:e",
+      "R:w",
+      "F5:e R:s E5:s D5:e F5:e E5:e R:s D5:s Db5:e R:e",
+      "R:q R:e Bb5:e A5:e G5:e F5:e E5:e",
+      "F5:e R:s E5:s D5:e F5:e E5:e R:s D5:s Db5:e R:e",
+      "R:q Db5:q D5:q R:q"
+    ],
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "aliases": "guiguichongchong guiguisuisui 鬼鬼祟祟 sneaky 搞笑 BGM",
+    "description": "原谱 9–16 小节双簧管主题；保留十六分休止、半音变化和短促节奏。",
+    "source": {
+      "label": "作曲者发布版本",
+      "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772"
+    },
+    "license": {
+      "label": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "rights": "Sneaky Snitch — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+    "scoreScope": "主题旋律",
+    "creditTitle": "Sneaky Snitch"
+  },
+  {
+    "id": "long-road-ahead",
+    "title": "前路漫漫",
+    "english": "Long Road Ahead",
+    "composer": "Kevin MacLeod",
+    "genre": "当代旋律",
+    "difficulty": "进阶",
+    "concertKeyFifths": 3,
+    "mode": "major",
+    "meter": [
+      3,
+      4
+    ],
+    "tempo": 73,
+    "bars": [
+      "E4:e F#4:e",
+      "A4:q. B4:e C#5:q",
+      "B4:q A4:q. F#4:e",
+      "E4:q A4:q. B4:e",
+      "A4:h C#5:e E5:e",
+      "F#5:h F#5:q",
+      "E5:h C#5:q",
+      "F#5:q E5:q C#5:q",
+      "B4:h E4:e F#4:e",
+      "A4:q. B4:e C#5:q",
+      "B4:q A4:q F#4:q",
+      "E4:q A4:q. B4:e",
+      "A4:h E5:q",
+      "A5:h.",
+      "E5:h.",
+      "D5:h B4:e A4:e",
+      "A4:h"
+    ],
+    "pickupTicks": 4,
+    "endingTicks": 8,
+    "aliases": "qianlumanman 前路 轻音乐 抒情",
+    "description": "作曲者发布的长笛主题段（原谱 18–34 小节）；保留弱起、附点和高音高潮，省略重复演奏。",
+    "source": {
+      "label": "作曲者发布版本",
+      "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100588"
+    },
+    "license": {
+      "label": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "rights": "Long Road Ahead — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+    "scoreScope": "主题旋律",
+    "creditTitle": "Long Road Ahead"
+  },
+  {
+    "id": "brittle-rille",
+    "title": "晶莹溪流",
+    "english": "Brittle Rille",
+    "composer": "Kevin MacLeod",
+    "genre": "当代旋律",
+    "difficulty": "进阶",
+    "concertKeyFifths": 1,
+    "mode": "major",
+    "meter": [
+      4,
+      4
+    ],
+    "tempo": 88,
+    "bars": [
+      "G5:q D5:e E5:e R:e A5:e R:e G5:e",
+      "B4:e D5:e E5:e B5:e R:e A5:e R:q",
+      "G5:q D5:e E5:e R:e A5:e R:e G5:e",
+      "R:e D5:e E5:e B4:e R:q A4:q",
+      "G5:q D5:e E5:e R:e A5:e R:e G5:e",
+      "B4:e D5:e E5:e B5:e R:e D6:e A5:q",
+      "G5:q D5:e E5:e R:e A5:e G5:q",
+      "D5:e E5:e R:q R:h",
+      "G5:q D5:e E5:e R:e A5:e R:e G5:e",
+      "B4:e D5:e E5:e B5:e R:e A5:e R:q",
+      "G5:q D5:e E5:e R:e A5:e R:e G5:e",
+      "R:e D5:e E5:e B4:e R:q A4:q",
+      "G5:q D5:e E5:e R:e A5:e R:e G5:e",
+      "B4:e D5:e E5:e B5:e R:e D6:e A5:q",
+      "G5:q D5:e E5:e R:e A5:e G5:q",
+      "D5:e E5:e R:q R:h"
+    ],
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "aliases": "jingyingxiliu brittle rille 轻音乐 音乐盒",
+    "description": "开头 8 小节主题重复展开；多声部和弦取最高旋律音，保留切分休止，不含伴奏。",
+    "source": {
+      "label": "作曲者发布版本",
+      "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200047"
+    },
+    "license": {
+      "label": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "rights": "Brittle Rille — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+    "scoreScope": "主题旋律",
+    "creditTitle": "Brittle Rille"
+  },
+  {
+    "id": "danse-morialta",
+    "title": "莫里亚尔塔之舞",
+    "english": "Danse Morialta",
+    "composer": "Kevin MacLeod",
+    "genre": "当代旋律",
+    "difficulty": "进阶",
+    "concertKeyFifths": 0,
+    "mode": "major",
+    "meter": [
+      3,
+      4
+    ],
+    "tempo": 70,
+    "bars": [
+      "C5:h.",
+      "D5:h.",
+      "E5:h.",
+      "Eb5:h.",
+      "C5:h A4:q",
+      "D5:h G4:q",
+      "G4:h.",
+      "R:h.",
+      "C5:h.",
+      "D5:h.",
+      "E5:h.",
+      "Eb5:h.",
+      "Eb5:h.",
+      "D5:q C5:q D5:q",
+      "Eb5:h.",
+      "D5:q C5:q D5:q",
+      "F5:h.",
+      "E5:q D5:q E5:q",
+      "F5:h.",
+      "E5:q D5:q C5:q",
+      "G4:h.",
+      "R:h G4:e G4:e",
+      "G5:h.",
+      "R:h B4:e. B4:s",
+      "C5:h.",
+      "R:h E5:q",
+      "C5:h.~",
+      "C5:h._"
+    ],
+    "pickupTicks": 0,
+    "endingTicks": 0,
+    "aliases": "moliy aerta moliyaertazhiwu danse morialta 钢琴 轻音乐",
+    "description": "钢琴主题 5–32 小节，旋律下降八度；和弦取最高音，省略短倚音，保留临时降号和结尾延音。",
+    "source": {
+      "label": "作曲者发布版本",
+      "url": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200026"
+    },
+    "license": {
+      "label": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "rights": "Danse Morialta — Kevin MacLeod (incompetech.com)，CC BY 4.0。SaxVoice 提取主题旋律、选择音区、移调并重新排版；不含原配器。",
+    "scoreScope": "主题旋律",
+    "creditTitle": "Danse Morialta"
   }
 ]

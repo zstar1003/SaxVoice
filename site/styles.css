@@ -22,7 +22,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .header-inner { height: 100%; max-width: 1440px; padding: 0 32px; margin: auto; display: flex; align-items: center; gap: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-size: 20px; font-weight: 650; letter-spacing: -.5px; }
 .brand:hover { text-decoration: none; }
-.brand svg { width: 24px; height: 24px; stroke-width: 1.8; color: var(--blue); }
+.brand img { width: 28px; height: 28px; object-fit: contain; }
 .header-divider { height: 17px; width: 1px; background: var(--line); }
 .header-label { font-weight: 500; }
 nav { margin-left: auto; display: flex; align-items: center; gap: 24px; font-size: 12px; }
@@ -121,7 +121,7 @@ h1 { font-size: 36px; font-weight: 650; line-height: 1.2; letter-spacing: -1px; 
   .site-header { height: 56px; }
   .header-inner { padding: 0 18px; gap: 14px; }
   .brand { font-size: 18px; }
-  .brand svg { width: 22px; height: 22px; }
+  .brand img { width: 26px; height: 26px; }
   .header-divider, .header-label, nav > a { display: none; }
   nav { gap: 12px; font-size: 11px; }
   #open-library { display: inline-flex; font-size: 12px; }

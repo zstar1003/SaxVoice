@@ -64,6 +64,8 @@ for piece in catalog['pieces']:
         expected=catalog['instruments'][instrument]
         assert root.findtext('.//instrument-name')==expected['english']
         assert root.findtext('.//midi-program')==str(expected['program'])
+        if piece.get('license'):
+            assert piece['license']['label'] in root.findtext('.//rights')
         for baseline,note in zip(soprano,seq):
             assert baseline[1:]==note[1:]
             if baseline[0] is None:
@@ -77,6 +79,10 @@ for piece in catalog['pieces']:
             assert abs(float(page.mediabox.width)-A4[0])<.1
             assert abs(float(page.mediabox.height)-A4[1])<.1
             assert len(page.images)==0
+            if piece.get('license'):
+                credit=page.extract_text()
+                assert piece['creditTitle'] in credit and piece['composer'] in credit and piece['license']['url'] in credit
+                assert any(a.get_object().get('/A',{}).get('/URI')==piece['license']['url'] for a in page.get('/Annots',[]))
         for page in variant['pages']:
             assert (SITE/page['image']).is_file()
         pages+=len(pdf.pages)

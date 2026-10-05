@@ -1,6 +1,6 @@
 # 新增旋律来源与版本记录
 
-整理日期：2026-10-05。以下曲目均使用公共领域历史旋律，单声部重新录入、移调与排版。现代流行歌曲编曲、录音、歌词与现代和声配器未被复制。这里的页面链接仅用于版本追溯。
+整理日期：2026-10-05。历史曲目使用公共领域旋律，单声部重新录入、移调与排版。当代作品另见文末 CC BY 4.0 主题记录；不含录音、歌词和伴奏配器。这里的页面链接仅用于版本追溯。
 
 | 曲目 | 参考 | 采用范围 |
 | --- | --- | --- |
@@ -51,3 +51,18 @@
 前一批扩充包含 12 首；逐首对照参考版的主旋律、弱起、附点节奏和延音线。《斯卡布罗集市》按 D 多利亚调式录入（自然 B），移调时保持调式。《桑塔·露琪亚》将两段反复及第二结尾展开为 32 小节。《红河谷》的最终空白停顿调整为与弱起配平的两拍尾小节。原谱连音线未统一作为萨克斯气息分句复制，不同音高间不记作延音线。所有曲谱为单声部旋律，不含伴奏。
 
 本批再增加 20 首，合计 40 首曲目。《珍重再见》采用 8 小节经典副歌。《晚安，姑娘们》副歌的相邻短小节合并为 4/4 小节，音符时值不变。《轻轻摇摆，甜蜜的马车》展开 DC al Fine，返始副歌结尾补四分休止；《祝你圣诞快乐》展开首段反复及第一、第二结尾。《伏尔加船夫曲》保留 A 小调、临时降 B 和三十二分装饰音，MusicXML 使用每拍 8 divisions，其他曲目仍使用 4 divisions。目录采用 4 个一级分类、9 个二级分组；所有新曲均提供高音与中音两版。
+
+## 当代主题扩充（contemporary-v6）
+
+新增六首 Kevin MacLeod 作品主题，曲库共 46 首、92 个版本、96 页 A4 PDF；5 个一级分类、10 个二级分组。采用作曲者 [曲谱目录](https://incompetech.com/music/royalty-free/sheetmusic/) 发布的谱面逐音录入。各曲发布页标明 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，每个 PDF 页脚与 MusicXML 均保留作品英文名、作曲者、网站和许可署名。网页曲谱信息中可查看署名和许可链接。以下均为主题旋律整理，不能作为全曲伴奏时间轴。
+
+| 曲目 | 作品发布页 | 采用谱面与改编范围 |
+| --- | --- | --- |
+| 小猴子转圈圈 / Monkeys Spinning Monkeys | [作曲者发布页](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400011) | MSM Sheet Music.zip 中 Flute 1；原长笛第一声部开头 8 小节循环主题，展开两遍；高八度标记改为萨克斯常用音区。 |
+| 鸭子抖毛 / Fluffing a Duck | [作曲者发布页](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100768) | Fluffing a Duck.pdf（参考编配 Kaesi Green）；开头主题，展开第一、第二结尾并去除整小节伴奏等待；低音旋律升八度，主题重复一次。 |
+| 鬼鬼祟祟 / Sneaky Snitch | [作曲者发布页](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772) | Sneaky Snitch.pdf；原谱 9–16 小节双簧管主题；保留十六分休止、半音变化和短促节奏。 |
+| 前路漫漫 / Long Road Ahead | [作曲者发布页](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100588) | Long_Road_Ahead_(Flute_Part).pdf；作曲者发布的长笛主题段（原谱 18–34 小节）；保留弱起、附点和高音高潮，省略重复演奏。 |
+| 晶莹溪流 / Brittle Rille | [作曲者发布页](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200047) | Brittle-Rille.pdf；开头 8 小节主题重复展开；多声部和弦取最高旋律音，保留切分休止，不含伴奏。 |
+| 莫里亚尔塔之舞 / Danse Morialta | [作曲者发布页](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200026) | Danse_Morialta_v2.pdf（参考排版 Gavin Stevens）；钢琴主题 5–32 小节，旋律下降八度；和弦取最高音，省略短倚音，保留临时降号和结尾延音。 |
+
+人工复核了小猴子主题结尾的 F–E–D–C 下降音型、晶莹溪流第 2/6 小节的四连八分音符及高音跳跃、前路漫漫弱起与 A5 高潮、莫里亚尔塔之舞半音与连结尾。高音和中音以同一旋律生成，节奏、临时记号和移调通过曲库校验。主题反复按演奏页展开，Fluffing a Duck 去除整小节等待并改作主题练习段。
