@@ -3,6 +3,7 @@ Dependencies: verovio, cairosvg, reportlab, pypdf; Poppler pdftoppm.
 SAXVOICE_SCORE_FONT and SAXVOICE_PDFTOPPM may override local runtime paths.
 """
 from pathlib import Path
+import argparse
 import copy
 import io
 import json
@@ -29,12 +30,13 @@ INSTRUMENTS = {
     'alto': {'label':'中音', 'name':'降 E 中音萨克斯', 'english':'Alto Saxophone in E-flat', 'program':66, 'diatonic':-5, 'chromatic':-9, 'octave':0},
     'tenor': {'label':'次中音', 'name':'降 B 次中音萨克斯', 'english':'Tenor Saxophone in B-flat', 'program':67, 'diatonic':-1, 'chromatic':-2, 'octave':-1},
 }
-MAJOR = {-1:'F 大调', 0:'C 大调', 1:'G 大调', 2:'D 大调', 3:'A 大调', 4:'E 大调'}
-MINOR = {-1:'D 小调', 0:'A 小调', 1:'E 小调', 2:'B 小调', 3:'F♯ 小调', 4:'C♯ 小调'}
+MAJOR = dict(zip(range(-7,8), [n+' 大调' for n in ('C♭','G♭','D♭','A♭','E♭','B♭','F','C','G','D','A','E','B','F♯','C♯')]))
+MINOR = dict(zip(range(-7,8), [n+' 小调' for n in ('A♭','E♭','B♭','F','C','G','D','A','E','B','F♯','C♯','G♯','D♯','A♯')]))
+DORIAN = dict(zip(range(-7,8), [n+' 多利亚' for n in ('D♭','A♭','E♭','B♭','F','C','G','D','A','E','B','F♯','C♯','G♯','D♯')]))
 
 
 def key_name(fifths, mode):
-    return (MINOR if mode == 'minor' else MAJOR)[fifths]
+    return {'major': MAJOR, 'minor': MINOR, 'dorian': DORIAN}[mode][fifths]
 
 
 def midi(pitch):
@@ -102,7 +104,7 @@ def create_xml(piece):
         # A pickup shares the first system with the next four full bars.
         start = 2 if piece['pickupTicks'] else 1
         if number > start and (number-start)%4 == 0:
-            element(measure, 'print', new_system='yes')
+            element(measure, 'print', **({'new_page':'yes'} if (number-start)%32==0 else {'new_system':'yes'}))
         if number == 1:
             attrs = element(measure, 'attributes')
             element(attrs, 'divisions', 4)
@@ -121,8 +123,8 @@ def create_xml(piece):
             element(metro, 'per-minute', piece['tempo'])
             element(direction, 'sound', tempo=piece['tempo'])
         beams = {}
-        # Compound 6/8 uses dotted-quarter beats (6 ticks).
-        groups = beam_groups(notes) if piece['meter'] != [6,8] else compound_beams(notes)
+        # Group eighth-note meters in dotted-quarter beats (6 ticks).
+        groups = compound_beams(notes) if piece['meter'][1]==8 and piece['meter'][0]%3==0 else beam_groups(notes)
         for group in groups:
             for i, index in enumerate(group):
                 beams[index] = [(1, 'begin' if i == 0 else 'end' if i == len(group)-1 else 'continue')]
@@ -181,6 +183,33 @@ def compound_beams(notes):
     return groups
 
 
+def display_accidentals(root):
+    """MusicXML pitch/alter alone is playback-only in Verovio; spell visible signs."""
+    fifths=int(root.findtext('.//key/fifths'))
+    key={s:0 for s in LETTERS}
+    for step in ('FCGDAEB' if fifths>=0 else 'BEADGCF')[:abs(fifths)]:
+        key[step]=1 if fifths>=0 else -1
+    for measure in root.findall('.//part/measure'):
+        active={}
+        for note in measure.findall('note'):
+            pitch=note.find('pitch')
+            if pitch is None:
+                continue
+            step=pitch.findtext('step'); octave=pitch.findtext('octave')
+            alteration=int(pitch.findtext('alter','0'))
+            old=note.find('accidental')
+            if old is not None:
+                note.remove(old)
+            tied=any(t.get('type')=='stop' for t in note.findall('tie'))
+            if not tied and alteration!=active.get((step,octave),key[step]):
+                accidental=ET.Element('accidental')
+                accidental.text={-1:'flat',0:'natural',1:'sharp'}[alteration]
+                # MusicXML requires accidentals after the type and dots, before beams.
+                index=list(note).index(note.find('type'))+1+len(note.findall('dot'))
+                note.insert(index,accidental)
+            active[(step,octave)]=alteration
+
+
 def overlay(piece, instrument, key, number, total, first, last):
     stream = io.BytesIO()
     c = canvas.Canvas(stream, pagesize=A4)
@@ -203,7 +232,7 @@ def overlay(piece, instrument, key, number, total, first, last):
     return PdfReader(io.BytesIO(stream.getvalue())).pages[0]
 
 
-def engrave(piece, root, instrument):
+def engrave(piece, root, instrument, previous=None):
     configure_instrument(root,instrument)
     fifths = int(root.findtext('.//key/fifths'))
     key = key_name(fifths,piece['mode'])
@@ -213,13 +242,22 @@ def engrave(piece, root, instrument):
     destination.mkdir(parents=True, exist_ok=True)
     ET.indent(root)
     xml = ET.tostring(root, encoding='utf-8', xml_declaration=True)
+    # Keep existing approved files whenever their generated notation is identical.
+    if previous and (SITE/previous['musicxml']).read_bytes()==xml and all((SITE/p['image']).exists() for p in previous['pages']) and (SITE/previous['pdf']).exists():
+        return copy.deepcopy(previous)
     (destination/'score.musicxml').write_bytes(xml)
     toolkit = verovio.toolkit()
-    toolkit.setOptions({'pageWidth':2100,'pageHeight':2970,'scale':100,'pageMarginTop':480,'pageMarginBottom':220,'pageMarginLeft':130,'pageMarginRight':130,'breaks':'encoded','header':'none','footer':'none','smuflTextFont':'none','spacingSystem':7 if piece['id']=='juebieshu' else 18,'systemMaxPerPage':9,'spacingLinear':.18,'spacingNonLinear':.55,'minLastJustification':0})
+    spacing=7 if piece['id']=='juebieshu' or piece['measureCount']>=29 else 18
+    toolkit.setOptions({'pageWidth':2100,'pageHeight':2970,'scale':100,'pageMarginTop':480,'pageMarginBottom':220,'pageMarginLeft':130,'pageMarginRight':130,'breaks':'encoded','header':'none','footer':'none','smuflTextFont':'none','spacingSystem':spacing,'systemMaxPerPage':9,'spacingLinear':.18,'spacingNonLinear':.55,'minLastJustification':0})
     assert toolkit.loadData(xml.decode())
     count = toolkit.getPageCount()
-    assert count == (3 if piece['id']=='juebieshu' else 1), (piece['id'],count)
-    ranges = [(1,36),(37,72),(73,109)] if count==3 else [(1,piece['measureCount'])]
+    if piece['id']=='juebieshu':
+        ranges=[(1,36),(37,72),(73,109)]
+    else:
+        start=2 if piece['pickupTicks'] else 1
+        cuts=[1]+list(range(start+32,piece['measureCount']+1,32))+[piece['measureCount']+1]
+        ranges=[(a,b-1) for a,b in zip(cuts,cuts[1:])]
+    assert count==len(ranges), (piece['id'],count,ranges)
     writer = PdfWriter()
     pages=[]
     for number,(first,last) in enumerate(ranges,1):
@@ -239,9 +277,15 @@ def engrave(piece, root, instrument):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--rebuild',nargs='*',help='Re-engrave named pieces, or all pieces when no IDs are given; approved base soprano stays unchanged.')
+    args=parser.parse_args()
     pdfmetrics.registerFont(TTFont('ScoreChinese',os.environ.get('SAXVOICE_SCORE_FONT','/System/Library/Fonts/STHeiti Light.ttc'),subfontIndex=0))
     manifest=json.loads((SITE/'scores/juebieshu/manifest.json').read_text())
     base=ET.parse(SITE/'scores/juebieshu/juebieshu-soprano-bb.musicxml').getroot()
+    previous={p['id']:p['variants'] for p in json.loads((SITE/'catalog.json').read_text())['pieces']} if (SITE/'catalog.json').exists() else {}
+    if args.rebuild is not None:
+        previous={k:v for k,v in previous.items() if args.rebuild and k not in args.rebuild}
     jue=dict(id='juebieshu',title='诀别书',english='Jue Bie Shu',aliases='juebieshu juebie 诀别',composer='邓垚',genre='当代旋律',difficulty='进阶',mode='minor',concertKey='D 小调',meterText='4/4',measureCount=109,description='109 小节完整旋律，保留已确认的高音版；49–64 小节降低八度。',rights='经授权整理发布；音乐作品及原曲谱权利归原权利人。',variants={},comparisonRecording=manifest['comparisonRecording'],verificationNote=manifest['verificationNote'])
     # Keep the approved soprano files byte-for-byte.
     jue['variants']['soprano']=dict(instrument='soprano',label=INSTRUMENTS['soprano']['name'],writtenKey='E 小调',writtenMidiRange=manifest['writtenMidiRange'],soundingOctaveOffset=0,pdf='scores/juebieshu/juebieshu-soprano-bb-a4.pdf',musicxml='scores/juebieshu/juebieshu-soprano-bb.musicxml',pages=[{**p,'image':'scores/juebieshu/'+p['image']} for p in manifest['pages']],referencePdf='scores/juebieshu/juebieshu-soprano-bb-reference-a4.pdf')
@@ -251,12 +295,12 @@ def main():
             for pitch in root.findall('.//note/pitch'):
                 shift(pitch,-5,-3)
             root.find('.//key/fifths').text='2'
-        jue['variants'][instrument]=engrave(jue,root,instrument)
+        jue['variants'][instrument]=engrave(jue,root,instrument,previous.get('juebieshu',{}).get(instrument))
     pieces=[jue]
     aliases={'amazing-grace':'qiyien dian qiyiendian 恩典','greensleeves':'lvxiuzi 绿袖','auld-lang-syne':'youyidijiutianchang 友谊','twinkle':'xiaoxingxing 星星','frere-jacques':'liangzhilaohu 两只 老虎','ode-to-joy':'huanlesong 贝多芬 Beethoven','brahms-lullaby':'yaolanqu 勃拉姆斯 Brahms'}
     for piece in json.loads((ROOT/'scores/library.json').read_text()):
         root=create_xml(piece)
-        piece.update(concertKey=key_name(piece['concertKeyFifths'],piece['mode']),meterText='/'.join(map(str,piece['meter'])),measureCount=len(piece['bars']),aliases=aliases[piece['id']],variants={})
+        piece.update(concertKey=key_name(piece['concertKeyFifths'],piece['mode']),meterText='/'.join(map(str,piece['meter'])),measureCount=len(piece['bars']),aliases=piece.get('aliases',aliases.get(piece['id'],'')),variants={})
         for instrument in INSTRUMENTS:
             part=copy.deepcopy(root)
             semitones,diatonic=(2,1) if instrument!='alto' else (-3,-2)
@@ -266,11 +310,12 @@ def main():
             for pitch in part.findall('.//note/pitch'):
                 shift(pitch,semitones,diatonic)
             part.find('.//key/fifths').text=str(piece['concertKeyFifths']+(2 if instrument!='alto' else 3))
-            piece['variants'][instrument]=engrave(piece,part,instrument)
+            display_accidentals(part)
+            piece['variants'][instrument]=engrave(piece,part,instrument,previous.get(piece['id'],{}).get(instrument))
             piece['variants'][instrument]['soundingOctaveOffset']=(semitones+INSTRUMENTS[instrument]['chromatic']+12*INSTRUMENTS[instrument]['octave'])//12
         pieces.append({k:v for k,v in piece.items() if k not in ('bars','pickupTicks','endingTicks','concertKeyFifths','tempo','meter')})
         print(piece['title']+': 3 instrument editions')
-    (SITE/'catalog.json').write_text(json.dumps(dict(version='library-v3',updatedDate='2026-10-05',instruments=INSTRUMENTS,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
+    (SITE/'catalog.json').write_text(json.dumps(dict(version='clean-v4',updatedDate='2026-10-05',instruments=INSTRUMENTS,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
     print(f'Built {len(pieces)} pieces / {len(pieces)*3} editions')
 
 

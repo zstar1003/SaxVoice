@@ -198,6 +198,7 @@
         </pitch>
         <duration>1</duration>
         <type>16th</type>
+        <accidental>sharp</accidental>
         <beam number="1">continue</beam>
         <beam number="2">backward hook</beam>
       </note>
@@ -383,6 +384,7 @@
         <duration>3</duration>
         <type>eighth</type>
         <dot />
+        <accidental>sharp</accidental>
         <beam number="1">begin</beam>
       </note>
       <note>
@@ -393,6 +395,7 @@
         </pitch>
         <duration>1</duration>
         <type>16th</type>
+        <accidental>sharp</accidental>
         <beam number="1">continue</beam>
         <beam number="2">backward hook</beam>
       </note>
@@ -462,6 +465,7 @@
         </pitch>
         <duration>1</duration>
         <type>16th</type>
+        <accidental>sharp</accidental>
         <beam number="1">continue</beam>
         <beam number="2">backward hook</beam>
       </note>
@@ -563,6 +567,7 @@
         </pitch>
         <duration>1</duration>
         <type>16th</type>
+        <accidental>sharp</accidental>
         <beam number="1">continue</beam>
         <beam number="2">backward hook</beam>
       </note>
@@ -595,6 +600,7 @@
         </pitch>
         <duration>2</duration>
         <type>eighth</type>
+        <accidental>sharp</accidental>
       </note>
       <note>
         <pitch>
@@ -744,6 +750,7 @@
         <duration>3</duration>
         <type>eighth</type>
         <dot />
+        <accidental>sharp</accidental>
         <beam number="1">begin</beam>
       </note>
       <note>
@@ -754,6 +761,7 @@
         </pitch>
         <duration>1</duration>
         <type>16th</type>
+        <accidental>sharp</accidental>
         <beam number="1">continue</beam>
         <beam number="2">backward hook</beam>
       </note>

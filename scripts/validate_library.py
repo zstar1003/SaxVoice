@@ -13,7 +13,12 @@ def events(path):
     trans=int(t.findtext('chromatic'))+12*int(t.findtext('octave-change','0'))
     notes=[]
     previous=None
+    fifths=int(root.findtext('.//key/fifths'))
+    key={step:0 for step in PC}
+    for step in ('FCGDAEB' if fifths>=0 else 'BEADGCF')[:abs(fifths)]:
+        key[step]=1 if fifths>=0 else -1
     for bar in root.findall('.//part/measure'):
+        accidentals={}
         duration=sum(int(n.findtext('duration')) for n in bar.findall('note'))
         beats=root.findtext('.//time/beats'); unit=root.findtext('.//time/beat-type')
         assert duration==int(beats)*16//int(unit) or bar.get('implicit')=='yes', (path,bar.get('number'))
@@ -23,6 +28,11 @@ def events(path):
             if pitch is not None:
                 assert 58<=pitch<=90,(path,pitch)
             ties=[tie.get('type') for tie in n.findall('tie')]
+            if p is not None:
+                step=p.findtext('step'); octave=p.findtext('octave'); alter=int(p.findtext('alter','0'))
+                if 'stop' not in ties and alter!=accidentals.get((step,octave),key[step]):
+                    assert n.findtext('accidental')=={-1:'flat',0:'natural',1:'sharp'}[alter], (path,bar.get('number'),'missing printed accidental')
+                accidentals[(step,octave)]=alter
             if 'stop' in ties:
                 assert previous and 'start' in previous[2] and previous[0]==pitch,(path,bar.get('number'))
             elif previous:
@@ -34,9 +44,11 @@ def events(path):
 
 catalog=json.loads((SITE/'catalog.json').read_text())
 pages=0
+editions=0
 for piece in catalog['pieces']:
     soprano,_=events(SITE/piece['variants']['soprano']['musicxml'])
     for instrument,variant in piece['variants'].items():
+        editions+=1
         seq,root=events(SITE/variant['musicxml'])
         assert len(seq)==len(soprano)
         expected=catalog['instruments'][instrument]
@@ -59,4 +71,4 @@ for piece in catalog['pieces']:
             assert (SITE/page['image']).is_file()
         pages+=len(pdf.pages)
         print(piece['id'],instrument,len(pdf.pages),'A4 vector pages / transpose, rhythm, ties OK')
-print(f'PASS: {len(catalog["pieces"])} pieces, 24 editions, {pages} pages')
+print(f'PASS: {len(catalog["pieces"])} pieces, {editions} editions, {pages} pages')

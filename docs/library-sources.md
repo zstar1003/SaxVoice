@@ -11,7 +11,21 @@
 | 两只老虎 | [同曲集，第 94 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf) | Frère Jacques，F 大调传统轮唱旋律，8 小节 |
 | 欢乐颂 | [Mutopia No.528](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528)，[源谱](https://www.mutopiaproject.org/ftp/BeethovenLv/ode/ode.ly) | 贝多芬主题，公共领域四声部版本的 soprano 主旋律，16 小节；原排版 Peter Chubb |
 | 摇篮曲 | [同曲集，第 67 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf)；历史作品 [Mutopia No.1037](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1037) | 勃拉姆斯 Op.49 No.4 主题旋律，F 大调，保留弱起和末句装饰节奏；不采用曲集和弦 |
+| 金发少女 | [同曲集，第 30 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=50) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 安妮·劳丽 | [同曲集，第 20 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=40) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 洛蒙德湖 | [同曲集，第 186 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=206) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 我的邦尼 | [同曲集，第 211 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=231) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 克莱门汀 | [同曲集，第 232 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=252) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 故乡的亲人 | [同曲集，第 235 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=255) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 红河谷 | [同曲集，第 259 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=279) | 完整传统旋律，保留弱起与临时降号；结尾停顿按弱起时值配平。 |
+| 桑塔·露琪亚 | [同曲集，第 269 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=289) | 完整旋律，将反复及第一、第二结尾展开为 32 小节；保留 3/8 拍与装饰节奏。 |
+| 斯卡布罗集市 | [同曲集，第 271 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=291) | 完整多利亚调式旋律，保留调式中的自然六级音和跨小节延音线。 |
+| 平安夜 | [同曲集，第 282 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=302) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 圣者的行进 | [同曲集，第 353 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=373) | 完整单声部旋律，按历史版本重新录入与移调。 |
+| 铃儿响叮当 | [同曲集，第 169 页](https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=189) | 完整单声部旋律，按历史版本重新录入与移调。 |
 
 曲集印刷页码与 PDF 页码相差 20 页；录入核对使用 35、47、87、114、356 等 PDF 页面。下载的研究材料保存在被 Git 忽略的 output 中，没有整本转载。曲目采用范围明确展示在网站与 catalog 中；《欢乐颂》并非交响曲全乐章，《摇篮曲》不包含原钢琴伴奏或逐词演唱重复。
 
-各曲的移调通过独立音高计算校验：高音实音为谱音 -2 半音；中音 -9；次中音 -14。中音通常位于高音实音下八度；《绿袖子》改为同实音八度，使最低谱音不低于 B♭3。所有乐器版节奏和小节顺序相同。
+各曲的移调通过独立音高计算校验：高音实音为谱音 -2 半音；中音 -9；次中音 -14。中音通常位于高音实音下八度；部分低起音旋律的中音版改为同实音八度，使最低谱音不低于 B♭3；每个版本的 catalog 元数据记录实际八度。所有乐器版节奏和小节顺序相同。
+
+本次扩充包含 12 首；逐首对照参考版的主旋律、弱起、附点节奏和延音线。《斯卡布罗集市》按 D 多利亚调式录入（自然 B），移调时保持调式。《桑塔·露琪亚》将两段反复及第二结尾展开为 32 小节。《红河谷》的最终空白停顿调整为与弱起配平的两拍尾小节。原谱连音线未统一作为萨克斯气息分句复制，不同音高间不记作延音线。所有曲谱为单声部旋律，不含伴奏。

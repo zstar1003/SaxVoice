@@ -1,5 +1,5 @@
 {
-  "version": "library-v3",
+  "version": "clean-v4",
   "updatedDate": "2026-10-05",
   "instruments": {
     "soprano": {
@@ -709,6 +709,978 @@
               "firstMeasure": 1,
               "lastMeasure": 17,
               "image": "scores/brahms-lullaby/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aura-lee",
+      "title": "金发少女",
+      "english": "Aura Lee",
+      "composer": "George R. Poulton",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 30 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=50"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "jinfashaonv 奥拉莉 Love Me Tender",
+      "concertKey": "B♭ 大调",
+      "meterText": "4/4",
+      "measureCount": 16,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "C 大调",
+          "writtenMidiRange": [
+            67,
+            77
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/aura-lee/soprano/score.pdf",
+          "musicxml": "scores/aura-lee/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/aura-lee/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            72
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/aura-lee/alto/score.pdf",
+          "musicxml": "scores/aura-lee/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/aura-lee/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "C 大调",
+          "writtenMidiRange": [
+            67,
+            77
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/aura-lee/tenor/score.pdf",
+          "musicxml": "scores/aura-lee/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 16,
+              "image": "scores/aura-lee/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "annie-laurie",
+      "title": "安妮·劳丽",
+      "english": "Annie Laurie",
+      "composer": "Alicia Scott",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 20 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=40"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "annilaoli 安妮劳丽",
+      "concertKey": "C 大调",
+      "meterText": "4/4",
+      "measureCount": 17,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/annie-laurie/soprano/score.pdf",
+          "musicxml": "scores/annie-laurie/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/annie-laurie/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            69,
+            85
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/annie-laurie/alto/score.pdf",
+          "musicxml": "scores/annie-laurie/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/annie-laurie/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            78
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/annie-laurie/tenor/score.pdf",
+          "musicxml": "scores/annie-laurie/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/annie-laurie/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "loch-lomond",
+      "title": "洛蒙德湖",
+      "english": "Loch Lomond",
+      "composer": "苏格兰传统民歌",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 186 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=206"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "luomengdehu 罗蒙湖",
+      "concertKey": "F 大调",
+      "meterText": "4/4",
+      "measureCount": 17,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/loch-lomond/soprano/score.pdf",
+          "musicxml": "scores/loch-lomond/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/loch-lomond/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            69,
+            83
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/loch-lomond/alto/score.pdf",
+          "musicxml": "scores/loch-lomond/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/loch-lomond/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/loch-lomond/tenor/score.pdf",
+          "musicxml": "scores/loch-lomond/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/loch-lomond/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "my-bonnie",
+      "title": "我的邦尼",
+      "english": "My Bonnie Lies over the Ocean",
+      "composer": "苏格兰传统民歌",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 211 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=231"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "wodebangni 我的邦妮",
+      "concertKey": "G 大调",
+      "meterText": "3/4",
+      "measureCount": 33,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            61,
+            73
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/my-bonnie/soprano/score.pdf",
+          "musicxml": "scores/my-bonnie/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 33,
+              "image": "scores/my-bonnie/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            68,
+            80
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/my-bonnie/alto/score.pdf",
+          "musicxml": "scores/my-bonnie/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 33,
+              "image": "scores/my-bonnie/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            61,
+            73
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/my-bonnie/tenor/score.pdf",
+          "musicxml": "scores/my-bonnie/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 33,
+              "image": "scores/my-bonnie/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "clementine",
+      "title": "克莱门汀",
+      "english": "Oh, My Darling Clementine",
+      "composer": "Percy Montrose / 美国传统民歌",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 232 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=252"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "kelaimenting 克莱门婷",
+      "concertKey": "F 大调",
+      "meterText": "3/4",
+      "measureCount": 17,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            74
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/clementine/soprano/score.pdf",
+          "musicxml": "scores/clementine/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/clementine/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            69,
+            81
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/clementine/alto/score.pdf",
+          "musicxml": "scores/clementine/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/clementine/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            62,
+            74
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/clementine/tenor/score.pdf",
+          "musicxml": "scores/clementine/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/clementine/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "old-folks-at-home",
+      "title": "故乡的亲人",
+      "english": "Old Folks at Home · Swanee River",
+      "composer": "Stephen Foster",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 235 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=255"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "guxiangdeqinren 福斯特 斯瓦尼河",
+      "concertKey": "D 大调",
+      "meterText": "4/4",
+      "measureCount": 24,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            64,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/old-folks-at-home/soprano/score.pdf",
+          "musicxml": "scores/old-folks-at-home/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/old-folks-at-home/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 大调",
+          "writtenMidiRange": [
+            59,
+            73
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/old-folks-at-home/alto/score.pdf",
+          "musicxml": "scores/old-folks-at-home/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/old-folks-at-home/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            64,
+            78
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/old-folks-at-home/tenor/score.pdf",
+          "musicxml": "scores/old-folks-at-home/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/old-folks-at-home/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "red-river-valley",
+      "title": "红河谷",
+      "english": "Red River Valley",
+      "composer": "北美传统民歌",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 259 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=279"
+      },
+      "description": "完整传统旋律，保留弱起与临时降号；结尾停顿按弱起时值配平。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "honghegu 红河",
+      "concertKey": "D 大调",
+      "meterText": "4/4",
+      "measureCount": 17,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            59,
+            71
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/red-river-valley/soprano/score.pdf",
+          "musicxml": "scores/red-river-valley/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/red-river-valley/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 大调",
+          "writtenMidiRange": [
+            66,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/red-river-valley/alto/score.pdf",
+          "musicxml": "scores/red-river-valley/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/red-river-valley/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            59,
+            71
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/red-river-valley/tenor/score.pdf",
+          "musicxml": "scores/red-river-valley/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/red-river-valley/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "santa-lucia",
+      "title": "桑塔·露琪亚",
+      "english": "Santa Lucia",
+      "composer": "Teodoro Cottrau",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 269 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=289"
+      },
+      "description": "完整旋律，将反复及第一、第二结尾展开为 32 小节；保留 3/8 拍与装饰节奏。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "sangtalvqiya 桑塔露琪亚",
+      "concertKey": "D 大调",
+      "meterText": "3/8",
+      "measureCount": 32,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            66,
+            80
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/santa-lucia/soprano/score.pdf",
+          "musicxml": "scores/santa-lucia/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/santa-lucia/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 大调",
+          "writtenMidiRange": [
+            61,
+            75
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/santa-lucia/alto/score.pdf",
+          "musicxml": "scores/santa-lucia/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/santa-lucia/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            66,
+            80
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/santa-lucia/tenor/score.pdf",
+          "musicxml": "scores/santa-lucia/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/santa-lucia/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "scarborough-fair",
+      "title": "斯卡布罗集市",
+      "english": "Scarborough Fair",
+      "composer": "英国传统民歌",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "dorian",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 271 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=291"
+      },
+      "description": "完整多利亚调式旋律，保留调式中的自然六级音和跨小节延音线。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "sikabuluojishi 斯卡布罗 斯卡堡集市",
+      "concertKey": "D 多利亚",
+      "meterText": "3/4",
+      "measureCount": 18,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "E 多利亚",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/scarborough-fair/soprano/score.pdf",
+          "musicxml": "scores/scarborough-fair/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 18,
+              "image": "scores/scarborough-fair/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "B 多利亚",
+          "writtenMidiRange": [
+            69,
+            83
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/scarborough-fair/alto/score.pdf",
+          "musicxml": "scores/scarborough-fair/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 18,
+              "image": "scores/scarborough-fair/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "E 多利亚",
+          "writtenMidiRange": [
+            62,
+            76
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/scarborough-fair/tenor/score.pdf",
+          "musicxml": "scores/scarborough-fair/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 18,
+              "image": "scores/scarborough-fair/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "silent-night",
+      "title": "平安夜",
+      "english": "Silent Night",
+      "composer": "Franz Xaver Gruber",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 282 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=302"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "pinganye 格鲁伯 圣诞",
+      "concertKey": "C 大调",
+      "meterText": "3/4",
+      "measureCount": 24,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            79
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/silent-night/soprano/score.pdf",
+          "musicxml": "scores/silent-night/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/silent-night/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            69,
+            86
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/silent-night/alto/score.pdf",
+          "musicxml": "scores/silent-night/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/silent-night/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            79
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/silent-night/tenor/score.pdf",
+          "musicxml": "scores/silent-night/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 24,
+              "image": "scores/silent-night/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "when-the-saints",
+      "title": "圣者的行进",
+      "english": "When the Saints Go Marching In",
+      "composer": "美国传统旋律",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 353 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=373"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "shengzhedexingjin 圣徒进行曲 圣者入城",
+      "concertKey": "F 大调",
+      "meterText": "4/4",
+      "measureCount": 17,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            67,
+            74
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/when-the-saints/soprano/score.pdf",
+          "musicxml": "scores/when-the-saints/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/when-the-saints/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "D 大调",
+          "writtenMidiRange": [
+            62,
+            69
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/when-the-saints/alto/score.pdf",
+          "musicxml": "scores/when-the-saints/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/when-the-saints/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "G 大调",
+          "writtenMidiRange": [
+            67,
+            74
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/when-the-saints/tenor/score.pdf",
+          "musicxml": "scores/when-the-saints/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 17,
+              "image": "scores/when-the-saints/tenor/page-1.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "jingle-bells",
+      "title": "铃儿响叮当",
+      "english": "Jingle Bells",
+      "composer": "James Lord Pierpont",
+      "genre": "传统旋律",
+      "difficulty": "基础",
+      "mode": "major",
+      "source": {
+        "label": "历史旋律对照 · 曲集第 169 页",
+        "url": "https://commons.wikimedia.org/wiki/File:The_Public_Domain_Song_Anthology_with_Modern_and_Traditional_Harmonization.pdf#page=189"
+      },
+      "description": "完整单声部旋律，按历史版本重新录入与移调。",
+      "rights": "公共领域历史旋律；SaxVoice 重新录入、移调与排版。",
+      "aliases": "lingerxiangdingdang 圣诞铃声",
+      "concertKey": "G 大调",
+      "meterText": "2/4",
+      "measureCount": 32,
+      "variants": {
+        "soprano": {
+          "instrument": "soprano",
+          "label": "降 B 高音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            78
+          ],
+          "soundingOctaveOffset": 0,
+          "pdf": "scores/jingle-bells/soprano/score.pdf",
+          "musicxml": "scores/jingle-bells/soprano/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/jingle-bells/soprano/page-1.png"
+            }
+          ]
+        },
+        "alto": {
+          "instrument": "alto",
+          "label": "降 E 中音萨克斯",
+          "writtenKey": "E 大调",
+          "writtenMidiRange": [
+            59,
+            73
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/jingle-bells/alto/score.pdf",
+          "musicxml": "scores/jingle-bells/alto/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/jingle-bells/alto/page-1.png"
+            }
+          ]
+        },
+        "tenor": {
+          "instrument": "tenor",
+          "label": "降 B 次中音萨克斯",
+          "writtenKey": "A 大调",
+          "writtenMidiRange": [
+            64,
+            78
+          ],
+          "soundingOctaveOffset": -1,
+          "pdf": "scores/jingle-bells/tenor/score.pdf",
+          "musicxml": "scores/jingle-bells/tenor/score.musicxml",
+          "pages": [
+            {
+              "number": 1,
+              "firstMeasure": 1,
+              "lastMeasure": 32,
+              "image": "scores/jingle-bells/tenor/page-1.png"
             }
           ]
         }
