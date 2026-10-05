@@ -364,7 +364,7 @@ def main():
         category=next(category for category in taxonomy if group in category['groups'])
         piece.update(category=category['id'],subcategory=group['id'])
     categories=[{**category,'groups':[{k:v for k,v in group.items() if k!='pieces'} for group in category['groups']]} for category in taxonomy]
-    (SITE/'catalog.json').write_text(json.dumps(dict(version='repertoire-v8',updatedDate='2026-10-05',instruments=INSTRUMENTS,categories=categories,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
+    (SITE/'catalog.json').write_text(json.dumps(dict(version='repertoire-v8a',updatedDate='2026-10-05',instruments=INSTRUMENTS,categories=categories,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
     print(f'Built {len(pieces)} pieces / {len(pieces)*len(INSTRUMENTS)} editions')
 
 
