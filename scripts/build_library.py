@@ -20,7 +20,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
-from build_score import element, vector_tempos, beam_groups, DURATIONS, TYPES, PITCH_CLASSES
+from build_score import element, vector_tempos, DURATIONS, TYPES, PITCH_CLASSES
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
@@ -28,7 +28,6 @@ LETTERS = 'CDEFGAB'
 INSTRUMENTS = {
     'soprano': {'label':'高音', 'name':'降 B 高音萨克斯', 'english':'Soprano Saxophone in B-flat', 'program':65, 'diatonic':-1, 'chromatic':-2, 'octave':0},
     'alto': {'label':'中音', 'name':'降 E 中音萨克斯', 'english':'Alto Saxophone in E-flat', 'program':66, 'diatonic':-5, 'chromatic':-9, 'octave':0},
-    'tenor': {'label':'次中音', 'name':'降 B 次中音萨克斯', 'english':'Tenor Saxophone in B-flat', 'program':67, 'diatonic':-1, 'chromatic':-2, 'octave':-1},
 }
 MAJOR = dict(zip(range(-7,8), [n+' 大调' for n in ('C♭','G♭','D♭','A♭','E♭','B♭','F','C','G','D','A','E','B','F♯','C♯')]))
 MINOR = dict(zip(range(-7,8), [n+' 小调' for n in ('A♭','E♭','B♭','F','C','G','D','A','E','B','F♯','C♯','G♯','D♯','A♯')]))
@@ -87,12 +86,16 @@ def create_xml(piece):
     element(mi, 'midi-program', 65)
     part = element(root, 'part', id='P1')
     capacity = piece['meter'][0]*16//piece['meter'][1]
+    # Keep existing editions byte-identical; finer divisions only for 32nd notes.
+    factor = 2 if any(':t' in bar for bar in piece['bars']) else 1
+    durations = {**DURATIONS, 't': .5}
+    types = {**TYPES, 't': '32nd'}
     previous = None
     for number, bar in enumerate(piece['bars'], 1):
         notes = []
         for token in bar.split():
             pitch, rhythm = token.split(':')
-            n = dict(duration=int(DURATIONS[rhythm[0]]*(1.5 if '.' in rhythm else 1)), type=TYPES[rhythm[0]], dot='.' in rhythm, start='~' in rhythm, stop='_' in rhythm, rest=pitch=='R')
+            n = dict(duration=durations[rhythm[0]]*(1.5 if '.' in rhythm else 1), type=types[rhythm[0]], dot='.' in rhythm, start='~' in rhythm, stop='_' in rhythm, rest=pitch=='R')
             if pitch != 'R':
                 match = re.fullmatch(r'([A-G])([#b]?)(\d)', pitch)
                 assert match, token
@@ -107,7 +110,7 @@ def create_xml(piece):
             element(measure, 'print', **({'new_page':'yes'} if (number-start)%32==0 else {'new_system':'yes'}))
         if number == 1:
             attrs = element(measure, 'attributes')
-            element(attrs, 'divisions', 4)
+            element(attrs, 'divisions', 4*factor)
             key = element(attrs, 'key')
             element(key, 'fifths', piece['concertKeyFifths'])
             element(key, 'mode', piece['mode'])
@@ -124,14 +127,16 @@ def create_xml(piece):
             element(direction, 'sound', tempo=piece['tempo'])
         beams = {}
         # Group eighth-note meters in dotted-quarter beats (6 ticks).
-        groups = compound_beams(notes) if piece['meter'][1]==8 and piece['meter'][0]%3==0 else beam_groups(notes)
+        groups = compound_beams(notes, 6 if piece['meter'][1]==8 and piece['meter'][0]%3==0 else 4)
         for group in groups:
             for i, index in enumerate(group):
                 beams[index] = [(1, 'begin' if i == 0 else 'end' if i == len(group)-1 else 'continue')]
-                if notes[index]['type'] == '16th':
-                    left = i > 0 and notes[group[i-1]]['type'] == '16th'
-                    right = i < len(group)-1 and notes[group[i+1]]['type'] == '16th'
-                    beams[index].append((2, 'continue' if left and right else 'end' if left else 'begin' if right else 'backward hook' if i else 'forward hook'))
+                depth = {'eighth':1, '16th':2, '32nd':3}[notes[index]['type']]
+                for level in range(2, depth+1):
+                    eligible = ('16th','32nd') if level==2 else ('32nd',)
+                    left = i > 0 and notes[group[i-1]]['type'] in eligible
+                    right = i < len(group)-1 and notes[group[i+1]]['type'] in eligible
+                    beams[index].append((level, 'continue' if left and right else 'end' if left else 'begin' if right else 'backward hook' if i else 'forward hook'))
         for index, n in enumerate(notes):
             if n['stop']:
                 assert previous and previous['start'] and all(n[k]==previous[k] for k in ('step','alter','octave'))
@@ -146,7 +151,9 @@ def create_xml(piece):
                 if n['alter']:
                     element(p, 'alter', n['alter'])
                 element(p, 'octave', n['octave'])
-            element(node, 'duration', n['duration'])
+            ticks = n['duration']*factor
+            assert ticks == int(ticks), (piece['id'], number, n)
+            element(node, 'duration', int(ticks))
             for state in ('stop','start'):
                 if n[state]:
                     element(node, 'tie', type=state)
@@ -167,11 +174,11 @@ def create_xml(piece):
     return root
 
 
-def compound_beams(notes):
+def compound_beams(notes, beat_ticks=6):
     groups, group, offset = [], [], 0
     for i, n in enumerate(notes):
-        short = n['type'] in ('eighth','16th') and not n['rest']
-        if not short or (offset%6==0 and group):
+        short = n['type'] in ('eighth','16th','32nd') and not n['rest']
+        if not short or (offset%beat_ticks==0 and group):
             if len(group)>1:
                 groups.append(group)
             group=[]
@@ -289,7 +296,7 @@ def main():
     jue=dict(id='juebieshu',title='诀别书',english='Jue Bie Shu',aliases='juebieshu juebie 诀别',composer='邓垚',genre='当代旋律',difficulty='进阶',mode='minor',concertKey='D 小调',meterText='4/4',measureCount=109,description='109 小节完整旋律，保留已确认的高音版；49–64 小节降低八度。',rights='经授权整理发布；音乐作品及原曲谱权利归原权利人。',variants={},comparisonRecording=manifest['comparisonRecording'],verificationNote=manifest['verificationNote'])
     # Keep the approved soprano files byte-for-byte.
     jue['variants']['soprano']=dict(instrument='soprano',label=INSTRUMENTS['soprano']['name'],writtenKey='E 小调',writtenMidiRange=manifest['writtenMidiRange'],soundingOctaveOffset=0,pdf='scores/juebieshu/juebieshu-soprano-bb-a4.pdf',musicxml='scores/juebieshu/juebieshu-soprano-bb.musicxml',pages=[{**p,'image':'scores/juebieshu/'+p['image']} for p in manifest['pages']],referencePdf='scores/juebieshu/juebieshu-soprano-bb-reference-a4.pdf')
-    for instrument in ('alto','tenor'):
+    for instrument in ('alto',):
         root=copy.deepcopy(base)
         if instrument=='alto':
             for pitch in root.findall('.//note/pitch'):
@@ -314,9 +321,21 @@ def main():
             piece['variants'][instrument]=engrave(piece,part,instrument,previous.get(piece['id'],{}).get(instrument))
             piece['variants'][instrument]['soundingOctaveOffset']=(semitones+INSTRUMENTS[instrument]['chromatic']+12*INSTRUMENTS[instrument]['octave'])//12
         pieces.append({k:v for k,v in piece.items() if k not in ('bars','pickupTicks','endingTicks','concertKeyFifths','tempo','meter')})
-        print(piece['title']+': 3 instrument editions')
-    (SITE/'catalog.json').write_text(json.dumps(dict(version='clean-v4',updatedDate='2026-10-05',instruments=INSTRUMENTS,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
-    print(f'Built {len(pieces)} pieces / {len(pieces)*3} editions')
+        print(piece['title']+': 2 instrument editions')
+    taxonomy=json.loads((ROOT/'scores/categories.json').read_text())
+    group_ids=[group['id'] for category in taxonomy for group in category['groups']]
+    assert len(group_ids)==len(set(group_ids)), 'Subcategory IDs must be unique'
+    membership=[id for category in taxonomy for group in category['groups'] for id in group['pieces']]
+    assert len(membership)==len(set(membership)), 'Duplicate category membership'
+    assert set(membership)=={piece['id'] for piece in pieces}, 'Category membership must match the library'
+    for piece in pieces:
+        group=next((group for category in taxonomy for group in category['groups'] if piece['id'] in group['pieces']),None)
+        assert group is not None, ('missing category',piece['id'])
+        category=next(category for category in taxonomy if group in category['groups'])
+        piece.update(category=category['id'],subcategory=group['id'])
+    categories=[{**category,'groups':[{k:v for k,v in group.items() if k!='pieces'} for group in category['groups']]} for category in taxonomy]
+    (SITE/'catalog.json').write_text(json.dumps(dict(version='grouped-v5',updatedDate='2026-10-05',instruments=INSTRUMENTS,categories=categories,pieces=pieces),ensure_ascii=False,indent=2)+'\n')
+    print(f'Built {len(pieces)} pieces / {len(pieces)*len(INSTRUMENTS)} editions')
 
 
 if __name__=='__main__':

@@ -43,6 +43,19 @@ kbd { color: #9999a0; font: 11px var(--font); }
 .filter-row { display: flex; align-items: center; justify-content: space-between; padding: 17px 8px 10px; font-size: 11px; color: var(--muted); gap: 8px; }
 .filter-row select { border: 0; color: var(--muted); background: transparent; font-size: 11px; max-width: 135px; padding: 4px 0; }
 .song-list { overflow-y: auto; padding: 1px 0 16px; scrollbar-width: thin; scrollbar-color: #d2d2d7 transparent; }
+.catalog-category { margin-bottom: 9px; }
+.catalog-category > summary, .catalog-group > summary { display: flex; align-items: center; gap: 7px; list-style: none; cursor: pointer; border-radius: 7px; }
+.catalog-category > summary::-webkit-details-marker, .catalog-group > summary::-webkit-details-marker { display: none; }
+.catalog-category > summary::before, .catalog-group > summary::before { content: ''; width: 5px; height: 5px; border-right: 1.4px solid currentColor; border-bottom: 1.4px solid currentColor; transform: rotate(-45deg); flex: 0 0 5px; transition: transform .16s; }
+.catalog-category[open] > summary::before, .catalog-group[open] > summary::before { transform: rotate(45deg); }
+.catalog-category > summary { color: var(--ink); font-size: 12px; font-weight: 600; padding: 9px 9px; }
+.catalog-category > summary:hover, .catalog-group > summary:hover { background: #ededf1; }
+.catalog-category summary small { margin-left: auto; color: #86868b; font-size: 10px; font-weight: 400; }
+.category-groups { padding: 1px 0 2px 9px; }
+.catalog-group > summary { color: var(--muted); font-size: 11px; padding: 8px 9px; }
+.group-songs { margin-left: 9px; border-left: 1px solid #e2e2e7; padding: 1px 0 3px 6px; }
+.group-songs .song-row { padding: 8px 9px; margin: 1px 0; }
+.catalog-category > summary:focus-visible, .catalog-group > summary:focus-visible { outline: 2px solid #0071e380; outline-offset: 1px; }
 .song-row { display: flex; align-items: center; width: 100%; text-align: left; border: 0; background: transparent; color: var(--ink); padding: 10px 12px; margin: 2px 0; border-radius: 8px; line-height: 1.4; transition: background .16s; }
 .song-row:hover { background: #ebebef; }
 .song-row[aria-current="true"] { color: #0066cc; background: #e5effa; font-weight: 500; }
@@ -121,6 +134,7 @@ h1 { font-size: 36px; font-weight: 650; line-height: 1.2; letter-spacing: -1px; 
   .sidebar-heading h2 { font-size: 19px; letter-spacing: -.3px; }
   .song-row { padding: 12px; }
   .song-row strong { font-size: 14px; }
+  .catalog-category > summary, .catalog-group > summary, .group-songs .song-row { min-height: 44px; }
   .search-field input { font-size: 16px; padding: 9px 0; }
   kbd { display: none; }
   .drawer-backdrop { display: block; position: fixed; inset: 0; z-index: 50; border: 0; padding: 0; background: #00000025; backdrop-filter: blur(3px); }

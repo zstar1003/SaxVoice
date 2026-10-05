@@ -14,6 +14,7 @@ def events(path):
     notes=[]
     previous=None
     fifths=int(root.findtext('.//key/fifths'))
+    divisions=int(root.findtext('.//divisions'))
     key={step:0 for step in PC}
     for step in ('FCGDAEB' if fifths>=0 else 'BEADGCF')[:abs(fifths)]:
         key[step]=1 if fifths>=0 else -1
@@ -21,7 +22,7 @@ def events(path):
         accidentals={}
         duration=sum(int(n.findtext('duration')) for n in bar.findall('note'))
         beats=root.findtext('.//time/beats'); unit=root.findtext('.//time/beat-type')
-        assert duration==int(beats)*16//int(unit) or bar.get('implicit')=='yes', (path,bar.get('number'))
+        assert duration==int(beats)*divisions*4//int(unit) or bar.get('implicit')=='yes', (path,bar.get('number'))
         for n in bar.findall('note'):
             p=n.find('pitch')
             pitch=None if p is None else 12*(int(p.findtext('octave'))+1)+PC[p.findtext('step')]+int(p.findtext('alter','0'))
@@ -43,6 +44,15 @@ def events(path):
     return [(None if p is None else p+trans,d,t) for p,d,t in notes],root
 
 catalog=json.loads((SITE/'catalog.json').read_text())
+assert set(catalog['instruments'])=={'soprano','alto'}
+assert not list((SITE/'scores').glob('*/tenor')), 'Removed instrument must not be published'
+categories={c['id']:{g['id'] for g in c['groups']} for c in catalog['categories']}
+assert len(categories)==len(catalog['categories'])
+ids=[p['id'] for p in catalog['pieces']]
+assert len(ids)==len(set(ids))
+for piece in catalog['pieces']:
+    assert piece['category'] in categories and piece['subcategory'] in categories[piece['category']]
+    assert set(piece['variants'])=={'soprano','alto'}
 pages=0
 editions=0
 for piece in catalog['pieces']:

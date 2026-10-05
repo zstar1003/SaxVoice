@@ -11,6 +11,15 @@
   const text = (id, value) => { $(id).textContent = value; };
   const imageURL = path => `./${path}?v=${state.catalog.version}`;
   let toastTimer;
+  const expanded = new Map();
+  const categoryOf = p => state.catalog.categories.find(c => c.id === p.category);
+  const groupOf = p => categoryOf(p).groups.find(g => g.id === p.subcategory);
+  const branchKey = (kind, id) => `${kind}:${id}`;
+  function openCurrentBranch() {
+    const p = piece();
+    expanded.set(branchKey('category', p.category), true);
+    expanded.set(branchKey('group', p.subcategory), true);
+  }
 
   function setDrawer(open, restoreFocus = true) {
     const shown = mobile.matches && open;
@@ -49,26 +58,55 @@
 
   function renderList() {
     if (!state.catalog) return;
-    const query = normalize($('song-search').value), genre = $('genre-filter').value;
-    const results = state.catalog.pieces.filter(p => (!genre || p.genre === genre) && normalize(`${p.title} ${p.english} ${p.composer} ${p.aliases}`).includes(query));
+    const query = normalize($('song-search').value), category = $('genre-filter').value;
+    const results = state.catalog.pieces.filter(p => (!category || p.category === category) && normalize(`${p.title} ${p.english} ${p.composer} ${p.aliases} ${categoryOf(p).label} ${groupOf(p).label}`).includes(query));
+    const expandedByFilter = Boolean(query || category);
     $('song-list').replaceChildren();
-    for (const p of results) {
-      const button = document.createElement('button');
-      button.type = 'button'; button.className = 'song-row';
-      button.setAttribute('aria-current', String(p.id === state.song));
-      button.setAttribute('aria-label', `${p.title}，${p.genre}`);
-      const title = document.createElement('strong'); title.textContent = p.title;
-      button.append(title);
-      button.addEventListener('click', () => {
-        if (state.song !== p.id) {
-          state.song = p.id; state.page = 1;
-          document.querySelector('.edition-details').open = false;
-          renderScore(); renderList(); updateURL();
-        }
-        setDrawer(false);
-        window.scrollTo({top: 0, behavior: reduceMotion.matches ? 'instant' : 'smooth'});
+    function branch(kind, id, label, count) {
+      const details = document.createElement('details');
+      details.className = `catalog-${kind}`; details.dataset.branch = id;
+      details.open = expandedByFilter || Boolean(expanded.get(branchKey(kind, id)));
+      const summary = document.createElement('summary');
+      const name = document.createElement('span'); name.textContent = label;
+      const total = document.createElement('small'); total.textContent = count;
+      total.setAttribute('aria-label', `${count} 首`);
+      summary.append(name, total); details.append(summary);
+      details.addEventListener('toggle', () => {
+        if (!expandedByFilter) expanded.set(branchKey(kind, id), details.open);
       });
-      $('song-list').append(button);
+      return details;
+    }
+    for (const category of state.catalog.categories) {
+      const categoryPieces = results.filter(p => p.category === category.id);
+      if (!categoryPieces.length) continue;
+      const parent = branch('category', category.id, category.label, categoryPieces.length);
+      const groups = document.createElement('div'); groups.className = 'category-groups';
+      for (const group of category.groups) {
+        const groupPieces = categoryPieces.filter(p => p.subcategory === group.id);
+        if (!groupPieces.length) continue;
+        const child = branch('group', group.id, group.label, groupPieces.length);
+        const songs = document.createElement('div'); songs.className = 'group-songs';
+        for (const p of groupPieces) {
+          const button = document.createElement('button');
+          button.type = 'button'; button.className = 'song-row';
+          button.setAttribute('aria-current', String(p.id === state.song));
+          button.setAttribute('aria-label', `${p.title}，${group.label}`);
+          const title = document.createElement('strong'); title.textContent = p.title;
+          button.append(title);
+          button.addEventListener('click', () => {
+            if (state.song !== p.id) {
+              state.song = p.id; state.page = 1;
+              document.querySelector('.edition-details').open = false;
+              openCurrentBranch(); renderScore(); renderList(); updateURL();
+            }
+            setDrawer(false);
+            window.scrollTo({top: 0, behavior: reduceMotion.matches ? 'instant' : 'smooth'});
+          });
+          songs.append(button);
+        }
+        child.append(songs); groups.append(child);
+      }
+      parent.append(groups); $('song-list').append(parent);
     }
     text('result-count', `${results.length} 首`);
     $('empty-results').hidden = results.length !== 0;
@@ -94,7 +132,7 @@
     const p = piece(), part = edition(), revision = ++state.revision;
     document.title = `${p.title} · ${part.label} | SaxVoice`;
     text('piece-title', p.title);
-    text('piece-category', p.genre);
+    text('piece-category', `${categoryOf(p).label} / ${groupOf(p).label}`);
     text('piece-subtitle', p.composer);
     text('written-key', part.writtenKey);
     text('score-summary', `${part.pages.length} 页`);
@@ -143,9 +181,9 @@
   function readURL() {
     const params = new URLSearchParams(location.search);
     state.song = state.catalog.pieces.some(p => p.id === params.get('song')) ? params.get('song') : 'juebieshu';
-    state.instrument = ['soprano', 'alto', 'tenor'].includes(params.get('instrument')) ? params.get('instrument') : 'soprano';
+    state.instrument = ['soprano', 'alto'].includes(params.get('instrument')) ? params.get('instrument') : 'soprano';
     state.page = Number(params.get('page')) || 1;
-    renderScore(); renderList(); updateURL(false);
+    openCurrentBranch(); renderScore(); renderList(); updateURL(false);
   }
 
   $('song-search').addEventListener('input', renderList);
@@ -183,27 +221,28 @@
     if (document.body.classList.contains('catalog-open')) {
       if (event.key === 'Escape') { event.preventDefault(); setDrawer(false); return; }
       if (event.key === 'Tab') {
-        const focusable = [...$('library').querySelectorAll('button:not(:disabled), input:not(:disabled), select:not(:disabled)')].filter(e => e.getClientRects().length);
+        const focusable = [...$('library').querySelectorAll('button:not(:disabled), input:not(:disabled), select:not(:disabled), summary')].filter(e => e.checkVisibility());
         const first = focusable[0], last = focusable.at(-1);
         if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
       }
       return;
     }
+    if (event.target.tagName === 'SUMMARY') return;
     if (!state.catalog || event.altKey || event.ctrlKey || event.metaKey || /^(INPUT|SELECT|TEXTAREA)$/.test(event.target.tagName) || event.target.isContentEditable) return;
     if (event.key === '/') { event.preventDefault(); if (mobile.matches) setDrawer(true); else if (!document.body.classList.contains('focus-mode')) $('song-search').focus(); }
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); showPage(state.page + (event.key === 'ArrowLeft' ? -1 : 1), true); }
     if (event.key === 'Escape' && document.body.classList.contains('focus-mode')) $('focus-reader').click();
   });
   window.addEventListener('popstate', () => { if (state.catalog) readURL(); });
-  fetch('./catalog.json?v=clean-v4').then(response => {
+  fetch('./catalog.json?v=grouped-v5').then(response => {
     if (!response.ok) throw new Error('Catalog unavailable');
     return response.json();
   }).then(catalog => {
     if (!catalog.pieces?.length) throw new Error('Empty catalog');
     state.catalog = catalog;
     text('piece-count', `${catalog.pieces.length} 首`);
-    for (const genre of new Set(catalog.pieces.map(p => p.genre))) $('genre-filter').add(new Option(genre, genre));
+    for (const category of catalog.categories) $('genre-filter').add(new Option(category.label, category.id));
     $('song-search').disabled = false; $('genre-filter').disabled = false;
     readURL();
   }).catch(() => { $('catalog-error').hidden = false; text('song-list', '曲库加载失败'); });

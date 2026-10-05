@@ -1,0 +1,19 @@
+[
+  {"id":"instrumental","label":"器乐与古典","groups":[
+    {"id":"contemporary","label":"当代器乐","pieces":["juebieshu"]},
+    {"id":"classical","label":"古典主题","pieces":["ode-to-joy","brahms-lullaby"]}
+  ]},
+  {"id":"folk","label":"民谣与传统","groups":[
+    {"id":"british-folk","label":"英伦民谣","pieces":["greensleeves","auld-lang-syne","annie-laurie","loch-lomond","my-bonnie","scarborough-fair"]},
+    {"id":"american-folk","label":"北美民谣","pieces":["aura-lee","clementine","old-folks-at-home","red-river-valley","yankee-doodle","camptown-races","careless-love","home-on-the-range","goodnight-ladies"]},
+    {"id":"world-folk","label":"世界民谣","pieces":["santa-lucia","aloha-oe","volga-boatmen"]}
+  ]},
+  {"id":"seasonal","label":"节庆与颂歌","groups":[
+    {"id":"christmas","label":"圣诞曲目","pieces":["silent-night","jingle-bells","deck-the-halls","o-tannenbaum","joy-to-the-world","we-wish-christmas"]},
+    {"id":"spiritual","label":"传统颂歌","pieces":["amazing-grace","when-the-saints","michael-row","simple-gifts","swing-low"]},
+    {"id":"celebration","label":"庆典歌曲","pieces":["happy-birthday"]}
+  ]},
+  {"id":"practice","label":"入门练习","groups":[
+    {"id":"nursery","label":"儿歌与轮唱","pieces":["twinkle","frere-jacques","london-bridge","mary-little-lamb","row-your-boat","old-macdonald","pop-goes-weasel"]}
+  ]}
+]
